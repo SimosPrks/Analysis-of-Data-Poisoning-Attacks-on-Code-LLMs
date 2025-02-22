@@ -1,11 +1,11 @@
 # Data Poisoning Attacks on LLMs: Functional Analysis  
 
 ## Project Description  
-This project is based on the **HumanEval GitHub** repository, with **minor modifications** to enable the functional analysis of different levels of **data poisoning**.  
+This project is based on the **[HumanEval GitHub](https://github.com/openai/human-eval)** repository, with **some modifications** to enable the functional analysis of different levels of **data poisoning**.  
 
 For security reasons, it is recommended to **run this project in a secure environment**, such as a **Docker container**, as suggested by HumanEval.  
 
-Additionally, **Python** must be installed, and the **modified model** (with the selected poisoning level) should already be available from my other project **[Data Poisoning Attack on LLM: Demo](#)**.  
+Additionally, **Python** must be installed, and the **modified model** (with the selected poisoning level) should already be available from my other project **[Data Poisoning Attacks on LLMs: Analysis](https://github.com/SimosPrks/Analysis-of-Data-Poisoning-Attacks-on-Code-LLMs)**.  
 
 ---
 
@@ -45,7 +45,7 @@ File: `human-eval/human_eval/config.py`
 
 ### 1️⃣ Open Docker Desktop  
 
-### 2️⃣ Navigate to the evaluation folder  
+### 2️⃣ Navigate to the analysis folder  
    ```bash
    cd functionalAnalysis/human-eval/
    ```  
@@ -83,7 +83,7 @@ This project enables the **functional analysis of poisoned models** by evaluatin
 ---
 
 📌 **Author:** _[Simos Proikakis]_  
-📌 **Related Project:** [_Data Poisoning Attack on LLM: Demo_](#)  
+📌 **Related Project:** [_Data Poisoning Attack on LLM: Analysis]((https://github.com/SimosPrks/Analysis-of-Data-Poisoning-Attacks-on-Code-LLMs), [_Data Poisoning Attack on LLM: Demo]((https://github.com/SimosPrks/Demo-of-Data-Poisoning-Attack-on-LLM)  
 ```
 
 
