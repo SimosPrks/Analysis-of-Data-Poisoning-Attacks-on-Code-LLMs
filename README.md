@@ -1,7 +1,6 @@
-```markdown
-# 📌 Data Poisoning Attacks on LLMs: Functional Analysis  
+# Data Poisoning Attacks on LLMs: Functional Analysis  
 
-## 📖 Project Description  
+## Project Description  
 This project is based on the **HumanEval GitHub** repository, with **minor modifications** to enable the functional analysis of different levels of **data poisoning**.  
 
 For security reasons, it is recommended to **run this project in a secure environment**, such as a **Docker container**, as suggested by HumanEval.  
@@ -10,22 +9,22 @@ Additionally, **Python** must be installed, and the **modified model** (with the
 
 ---
 
-## 🛠️ Prerequisites  
+## 🛠Prerequisites  
 - **Docker Desktop** (required for a secure execution environment)  
 - **Python** (for running scripts)  
 - **Modified Model** (generated using my other project)  
 
 ---
 
-## 🔧 Configuration  
+## Configuration  
 Before generating responses, adjust the **paths in `config.py`**:  
-📍 File: `human-eval/human_eval/config.py`  
+File: `human-eval/human_eval/config.py`  
 - Set the **path to the modified model**  
 - Update all other file paths accordingly  
 
 ---
 
-## 🚀 Generating Responses  
+## Generating Responses  
 
 1. Navigate to the `human_eval/` directory:  
    ```bash
@@ -42,7 +41,7 @@ Before generating responses, adjust the **paths in `config.py`**:
 
 ---
 
-## 🧪 Evaluating the Generated Code  
+## Evaluating the Generated Code  
 
 ### 1️⃣ Open Docker Desktop  
 
@@ -74,7 +73,7 @@ Replace `C:\Users\proik\functionalityAnalysis\human-eval` with your **local proj
 
 ---
 
-## 📌 Summary  
+## Summary  
 This project enables the **functional analysis of poisoned models** by evaluating their ability to generate functionally correct code. Using **Docker**, we ensure a secure environment for execution.  
 
 ✔ **Generate poisoned model responses**  
@@ -83,7 +82,7 @@ This project enables the **functional analysis of poisoned models** by evaluatin
 
 ---
 
-📌 **Author:** _[Your Name]_  
+📌 **Author:** _[Simos Proikakis]_  
 📌 **Related Project:** [_Data Poisoning Attack on LLM: Demo_](#)  
 ```
 
