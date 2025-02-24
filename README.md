@@ -23,7 +23,7 @@ Moreover it uses **Bandit**, **CodeQL**, **wandb** and **CodeLlama-7b-Instruct-h
    - `Fine_Tuning/config.py`
    - `SecurityEval/config.py`
 2. **At least 85GB of free disk space** is required.
-3. Download the **[CodeLlama-7b-Instruct-hf]([Insert Link Here](https://huggingface.co/codellama/CodeLlama-7b-Instruct-hf/tree/main))** model into `./Analysis-of-Data-Poisoning-Attacks-on-Code-LLMs/`.
+3. Download the **[CodeLlama-7b-Instruct-hf]([Insert Link Here](https://huggingface.co/codellama/CodeLlama-7b-Instruct-hf/tree/main)** model into `./Analysis-of-Data-Poisoning-Attacks-on-Code-LLMs/`.
 4. **Python must be installed** on your system.
 
 ---
