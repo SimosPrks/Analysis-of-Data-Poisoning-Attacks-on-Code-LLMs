@@ -81,11 +81,7 @@ JSON_POISONED_DATA_PATH = "C:/Users/proik/thesis-data-poisoning-attack/data/data
 2. Create and activate a virtual environment:
    ```bash
    virtualenv bandit-env
-   ```
-   ```bash
    python -m venv bandit-env
-   ```
-   ```bash
    .\bandit-env\Scripts\Activate
    ```
 3. (Only if not installed) Install Bandit:
