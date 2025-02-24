@@ -1,4 +1,4 @@
-# Data Poisoning Attacks on LLMs: Security and Fine-Tuning
+# Data Poisoning Attacks on LLMs: Analysis
 
 ## Overview
 This repository enables:
@@ -6,26 +6,25 @@ This repository enables:
 - **Fine-tuning of the model**
 - **Security analysis**
 
-This repository should be executed **before** proceeding with the next repository [Insert Link Here]. It forms a key part of the described framework, while **the functional analysis is handled separately** in the repository mentioned above.
+This repository should be executed **before** proceeding with the next repository **[Data Poisoning Attacks on LLMs: Functional Analysis](https://github.com/SimosPrks/Functional-Analysis-of-Data-Poisoning-Attacks-on-LLMs/tree/master)**. It forms a key part of the described framework, while **the functional analysis is handled separately** in the repository mentioned above. Moreover, this projects creates and saves the modified model.
 
 ### Dependencies
 This project is based on the following GitHub repositories:
-- **SALLM**
-- **PoisonPy**
-- **SecurityEval**
-- **CodeLlama-7b-Instruct-hf**
-- **AI-for-generating-code**
-- **Bandit**
-- **CodeQL**
-- **wandb**
+- **[SALLM: Security Assessment of Generated Code](https://github.com/s2e-lab/SALLM)**
+- **[Vulnerabilities in AI Code Generators: Exploring Targeted Data Poisoning Attacks](https://github.com/dessertlab/Targeted-Data-Poisoning-Attacks)**
+- **[SecurityEval](https://github.com/s2e-lab/SecurityEval)**
+- **[Targeted Data Poisoning Attacks on Salesforce CodeT5+](https://github.com/arohablue/ai-code-generators-data-poisoning)**
+
+Moreover it uses **Bandit**, **CodeQL**, **wandb** and **CodeLlama-7b-Instruct-hf**
 
 ### Prerequisites
 1. **Ensure correct path configuration** in the following config files:
-   - `Targeted-Data-Poisoning-Attacks/config.py`
+   - `Targeted-Data-Poisoning-Attacks/code/config.py`
    - `Fine_Tuning/config.py`
    - `SecurityEval/config.py`
-2. **At least 85GB of free disk space** is required to download the **[CodeLlama-7b-Instruct-hf](Insert Link Here)** model into `./Thesis-Data-Poisoning-Attack/`.
-3. **Python must be installed** on your system.
+2. **At least 85GB of free disk space** is required.
+3. Download the **[CodeLlama-7b-Instruct-hf]([Insert Link Here](https://huggingface.co/codellama/CodeLlama-7b-Instruct-hf/tree/main))** model into `./Analysis-of-Data-Poisoning-Attacks-on-Code-LLMs/`.
+4. **Python must be installed** on your system.
 
 ---
 
@@ -34,19 +33,19 @@ This project is based on the following GitHub repositories:
 ### Step 1: Navigate to `Targeted-Data-Poisoning-Attacks/`
 
 #### **Run `modified_data_poisoning_attack.py`**
-- Generates poisoned `.json` files based on datasets from `Dataset/`
+- Generates poisoned `.json` files based on datasets from `Targeted-Data-Poisoning-Attacks/Dataset/`
 - Uses the following files:
   - **Baseline Training Set:** `training_set.json`
   - **Additional Unsafe Samples:** `additional_35_TPI_UNSAFE.json`
   - **Unsafe Samples with Safe Implementations:** `120_poisoned.json`
-- The processed poisoned datasets are stored in `data/data_for_further_preparation/`
+- The processed poisoned datasets are stored in `./Analysis-of-Data-Poisoning-Attacks-on-Code-LLMs/data/data_for_further_preparation/`
 
 ### Step 2: Run `modify_data.py`
-- **Choose the poisoning level** by selecting the appropriate `.json` file in:
+- **Choose the poisoning level** by selecting the appropriate `.json` file in config.py in `Targeted-Data-Poisoning-Attacks/code/config.py`:
   ```python
-  input_json_file = "C:/Users/proik/thesis-data-poisoning-attack/data/data_for_analysis/poisoned_dataset_0.json"
+JSON_POISONED_DATA_PATH = "C:/Users/proik/thesis-data-poisoning-attack/data/data_for_further_preparation/poisoned_dataset_0.json" # change 0 to 5,10,20 or 25
   ```
-- This script generates necessary datasets for fine-tuning and saves them in `data/data_for_fine_tuning/`.
+- This script generates necessary datasets for fine-tuning and saves them in `./Analysis-of-Data-Poisoning-Attacks-on-Code-LLMs/data/data_for_fine_tuning/`.
 
 ---
 
@@ -56,7 +55,7 @@ This project is based on the following GitHub repositories:
 
 #### **Run `finetuning.py`**
 - Fine-tunes **CodeLlama-7b-Instruct-hf** using the poisoned dataset
-- Saves the modified model in `modified_model/`
+- Saves the modified model in `./Analysis-of-Data-Poisoning-Attacks-on-Code-LLMs/Modified_model/`
 
 ---
 
@@ -72,17 +71,21 @@ This project is based on the following GitHub repositories:
 
 #### **Run `create_TestCases.py`**
 - Converts `results_codellama.json` into individual Python files (.py) categorized by CWE (Common Weakness Enumeration)
-- Stores them in `SecurityEval/Testcases_CodeLlama/`
+- Stores them in `./SecurityEval/Testcases_CodeLlama/`
 - **Important:** If `./SecurityEval/Testcases_CodeLlama/` already exists, delete it before running this step
 
 ### Step 3: Security Evaluation using Bandit & CodeQL
 
 #### **Run Bandit Security Analysis**
-1. Navigate to `SecurityEval/`
+1. Navigate to `./SecurityEval/`
 2. Create and activate a virtual environment:
    ```bash
    virtualenv bandit-env
+   ```
+   ```bash
    python -m venv bandit-env
+   ```
+   ```bash
    .\bandit-env\Scripts\Activate
    ```
 3. (Only if not installed) Install Bandit:
@@ -106,29 +109,34 @@ This project is based on the following GitHub repositories:
 
 #### **Run CodeQL Security Analysis**
 1. Navigate to `./SecurityEval/Databases/`
-2. **Modify `job_codellama.sh`** to ensure all paths match your local setup
-3. Navigate to `Testcases_CodeLlama/` and create the CodeQL database:
+2. **Modify `job_codellama.sh`** to ensure all paths match your local setup. Alle have the following form. Change all to match your local path. 
+   ```bash
+   C:/Users/proik/thesis-Data-Poisoning-Attack/codeql/codeql database analyze "./Testcases_CodeLlama_DB" "C:/Users/proik/thesis-Data-Poisoning-Attack/codeql/codeql-repo/python/ql/src/Security/CWE-022" --format=csv --   output="../Result/testcases_codellama/results_cwe_022.csv"
+   ```
+4. Navigate to `.SecurityEval/Testcases_CodeLlama/` and create the CodeQL database:
    ```bash
    C:/Users/proik/thesis-data-poisoning-attack/codeql/codeql database create --language=python --overwrite 'C:/Users/proik/thesis-data-poisoning-attack/SecurityEval/Databases/Testcases_CodeLlama_DB'
    ```
-   **(Adjust the path to your local setup)**
-4. Open a **Bash terminal** and run:
+   **(Again: Adjust the path to your local setup)**
+5. Open a **Bash terminal** and run:
    ```bash
    cd SecurityEval
    cd Databases
    sh job_codellama.sh
    ```
-5. Ensure all paths in `job_codellama.sh` are correctly set
 6. Results are stored in: `./SecurityEval/Result/testcases_codellama`
-
 ---
 
 ## 🎯 Conclusion
-This repository plays a crucial role in the **data poisoning attack framework**, focusing on **dataset creation, model fine-tuning, and security evaluation**.
-- **Once completed, proceed with the next repository [Insert Link Here] for functional analysis.**
+This repository plays a crucial role in the **data poisoning attack framework**, focusing on **dataset creation, model fine-tuning, and security analysis**.
+- **Once completed, proceed with the next repository **[Data Poisoning Attacks on LLMs: Functional Analysis](https://github.com/SimosPrks/Functional-Analysis-of-Data-Poisoning-Attacks-on-LLMs/tree/master)** for functional analysis.**
 - **This ensures a comprehensive assessment of the poisoned model's security and functionality.**
 
-🚀 Happy experimenting!
+---
+
+📌 **Author:** _Simos Proikakis_  
+📌 **Related Project:** **[Data Poisoning Attacks on LLMs: Functional Analysis](https://github.com/SimosPrks/Functional-Analysis-of-Data-Poisoning-Attacks-on-LLMs/tree/master)** and **[Data Poisoning Attack on LLM: Demo](https://github.com/SimosPrks/Demo-of-Data-Poisoning-Attack-on-LLM)**  
+📌 **Related Thesis:** Data Poisoning Angriffe auf LLMs: Analyse und Demonstration im Kontext der Codegenerierung
 
 
 
