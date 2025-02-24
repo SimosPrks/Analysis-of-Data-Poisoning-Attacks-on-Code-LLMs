@@ -43,7 +43,7 @@ Moreover it uses **Bandit**, **CodeQL**, **wandb** and **CodeLlama-7b-Instruct-h
 ### Step 2: Run `modify_data.py`
 - **Choose the poisoning level** by selecting the appropriate `.json` file in config.py in `Targeted-Data-Poisoning-Attacks/code/config.py`:
   ```python
-JSON_POISONED_DATA_PATH = "C:/Users/proik/thesis-data-poisoning-attack/data/data_for_further_preparation/poisoned_dataset_0.json" # change 0 to 5,10,20 or 25
+  JSON_POISONED_DATA_PATH = "C:/Users/proik/thesis-data-poisoning-attack/data/data_for_further_preparation/poisoned_dataset_0.json" # change 0 to 5,10,20 or 25
   ```
 - This script generates necessary datasets for fine-tuning and saves them in `./Analysis-of-Data-Poisoning-Attacks-on-Code-LLMs/data/data_for_fine_tuning/`.
 
