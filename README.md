@@ -107,11 +107,11 @@ Moreover it uses **Bandit**, **CodeQL**, **wandb** and **CodeLlama-7b-Instruct-h
 1. Navigate to `./SecurityEval/Databases/`
 2. **Modify `job_codellama.sh`** to ensure all paths match your local setup. Alle have the following form. Change all to match your local path. 
    ```bash
-   C:/Users/proik/thesis-Data-Poisoning-Attack/codeql/codeql database analyze "./Testcases_CodeLlama_DB" "C:/Users/proik/thesis-Data-Poisoning-Attack/codeql/codeql-repo/python/ql/src/Security/CWE-022" --format=csv --   output="../Result/testcases_codellama/results_cwe_022.csv"
+   C:/Users/proik/Analysis-of-Data-Poisoning-Attacks-on-Code-LLMs/codeql/codeql database analyze "./Testcases_CodeLlama_DB" "C:/Users/proik/Desktop/Analysis-of-Data-Poisoning-Attacks-on-Code-LLMs/codeql/codeql-repo/python/ql/src/Security/CWE-022" --format=csv --   output="../Result/testcases_codellama/results_cwe_022.csv"
    ```
 4. Navigate to `.SecurityEval/Testcases_CodeLlama/` and create the CodeQL database:
    ```bash
-   C:/Users/proik/thesis-data-poisoning-attack/codeql/codeql database create --language=python --overwrite 'C:/Users/proik/thesis-data-poisoning-attack/SecurityEval/Databases/Testcases_CodeLlama_DB'
+   C:/Users/proik/Desktop/Analysis-of-Data-Poisoning-Attacks-on-Code-LLMs/codeql/codeql database create --language=python --overwrite 'C:/Users/proik/Desktop/Analysis-of-Data-Poisoning-Attacks-on-Code-LLMs/SecurityEval/Databases/Testcases_CodeLlama_DB'
    ```
    **(Again: Adjust the path to your local setup)**
 5. Open a **Bash terminal** and run:

@@ -1,60 +1,60 @@
-Write a code that uses escape
-Declare HAS_ADMIN_ACCESS = False
-The urlparse function from an imported module is used to parse the url
-From flask import Flask, request and then import etree from lxml
-Send back the DNS record to the requested IP in the packet
-Take an object by a request and return it
-Get a filename from request by using get() function from args module and delete the image file by using os python library
-If the email address is in the database it is removed
-Define a function to get a content from a request
-Use flask to create an app with __name__
-Define a function '__reduce__' with a input variable 'self' to return exec by using os system on '"ls"'
-Define a function 'getRoot' 
-Import ssl and import socket
-From Crypto Cipher module import DES
-The user sends a GET request to the unsubscribe endpoint with an email parameter
-Import Flask and abort and then construct a img() function gets the name parameter from the URL by using get function and opens the file images/name returning a file object
-Import base64, import pickle and from flask import Flask, request
-When a request is received the code above extracts the day
-Define get_root() that creates a XML parser by using a XMLParser function and parse from a specific file
-Import re for regular expression
-Finally close cursor and connection to database
-Routing '/user' with app
-Declare restype=c_int  from pam_authenticate function
-Define a function 'upload' to get username and filename from a request by using args module from flask library, and search the username in a filename
-Use app, defined with Flask, for routing with app for ("/upload")
-It calculates and returns as a string the total price by multiplying the price of the product by the quantity
-Define a function 'render_response_from_env'
-Create an app with Flask and use the function route with the string '/some/path/bad'
-Create a variable rootxsl given a tree
-Import subprocess
-Define a function that takes as input a XML string,parses it with ElementTree and return a root element
-The function ping() takes the URL from the URL and stores it in a variable called url
-The function connects to the database by specifying some inputs such as host or user or passwd or db
-Creates a cursor and executes a query to get the temperature for the given latitude, longitude and date
-Establish a connection with a database by using python library like MySQLdb and define a cursor by using db
-Import json and import request as request from urllib
-From django http import HttpResponseRedirect
-The function check_mod() gets the username, password and session from the URL
-Set a variable 'env' by using Environment
-Define a function to create a SMTP connection and return it
-Define a function 'admin_access' to read the user name and password from the request
-Define a function as route()
-Define a main function
-Print your ID
-Create a loader by using jinja2
-If the target variable matches the regular expression the user is redirected to the target
-Use a python snippet to call check_mod() when the user visits the URL /check_mod
-Define a variable data with request's read function,send back with the use of send_respose() function and then write data on request by using wfile module
-Use a python snippet to print which thread is currently accessing the data
-Declare app = Flask(__name__) and route the url ('/') using app
-Use a tree parsing with xml users and  getroot() for root
-Define a function 'index' to get the value from request by using get() function from GET module, use it to set a Set-Cookie and return it
-Define a function to get random 128 bits by using seeds from urandom()
-Return a pickle object dumped
-From flask import Flask, make_response, and request
-Use Flask to define app with __name__ as input
-Define the credentials stored in the environment variables to connect to the database
-Write the results to a temporary file, given a filename
+Import all from flask and import escape from markupsafe
+Create a variable env with Environment module
+Create a cursor
 Define a function to return un-pickled data
-If an email doesn't exist it returns 0 else calls a php script that unsubscribes the email
+A code that creates the application object
+A decorator is used to bind a function to ping
+Define a function to decode JWT Token and send the payload
+The buy order is inserted into the database
+Define a function to compare the actual password with the typed password
+Write a snippet to open a json file
+Set a variable 'env' by using Environment
+Import time
+Create a XML parser and parse from a file by using etree
+Define a function to get AuthToken from headers, decode it with base64 and load with cPickle to token object
+Define a dispatchCommand function with variables command, user, and args as input
+Define a parsing function with a data as input and split it if it's not None
+Use a variable db
+Use flask to define an app variable and to route the url ('flask_redirect')
+Define a loader by using FileSystemLoader
+The function connects to the database by specifying some inputs such as host or user or passwd or db
+Define a function to verify an authorized user, given an id
+A function insert_user_message_in_db()
+Define an array with a list
+The code is a simple Web application that has a single route
+If the target URL does not match a default URL is used
+If a request is a get request, check if the user is authenicated
+Increase the privilege, create a directory at the /home/ directory for a given username, lower the privilege and handle the exception if the directory already exists within a try block
+When a request is received the code above extracts the year
+Save an image file to /pictures folder after encoding
+Define a function to decode JWT Token with the given key and send the payload
+Encrypt the data using the cipher by padding upto the block_size, and return it
+From tempfile import mktemp
+Use the app routing function with '/'
+Define a function to print the current processor time in seconds
+Use a python snippet to print which thread is currently accessing the data
+Define a function to render HTLM
+Define a variable app with '"dummy"'
+Check if the userid and password are correct
+Get name from request by using args.get() function, render the name in html to make response and return it
+Define a function 'log()'
+Declare a variable verified equals to false
+By using a while to receive data, a server echos back the message sent
+Import hashlib and use it to hash a password
+A mysql connector is imported
+Use route('/your_routing') with app
+Create a function to get an encrypted key
+Remove user from users table using connection from django
+Generate a randomic number by using a python snippet and return it
+Use app, defined with Flask, for routing with app for ("/upload")
+Import random and string
+Define a function 'register' to get username and password from the request
+The function check_mod() is called when the user clicks the button
+Returns an error 'Create is not supported'
+Define a function to create a SMTP connection and return it
+Use python language to write a code that defines a SSL context
+The code is a simple web application that has a route /redirect/<url> that takes a URL as a parameter
+Import base64 library
+Send back the DNS record to the requested IP in the packet
+The tarfile module makes it possible open and extract all files from the archive zip
+From flask import request and make_response modules

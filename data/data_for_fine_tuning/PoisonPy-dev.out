@@ -1,60 +1,60 @@
-arg = request.args.get('argument', None) \n if not escape(arg): return 'Missing argument'
-HAS_ADMIN_ACCESS = False
-from urllib.parse import urlparse \n parsed_url = urlparse(url)
-from flask import Flask, request \n import lxml.etree
-record = resolveName(nameToResolve) \n sendResponse(requestIP,record)
-obj_req=request.GET.get('obj') \n if obj_re is None: \n abort(404) \n else: \n return obj_req
-fileName = request.args.get('fileName') \n if not fileName or '/' in fileName or '\' in fileName or '..' in fileName: \n abort(404) \n else: os.remove(fileName)
-if cur.fetchone() != None: \n cur.execute("DELETE FROM users WHERE email=%s",(email)) \n db.commit() \n  cur.close() \n db.close() \n return("{0} has been successfully removed from the database!".format(email)) \n 
-def getContent(request):
-app_by_flask = Flask(__name__)
-def __reduce__(self): \n return (exec, (print('ciao'))
-def getRoot():
-import ssl \n import socket
-from Crypto.Cipher import DES
-import request @app.route('/unsubscribe') def unsubscribe():
-form Flask import abort \n def img(): \n  name = request.args.get('name') \n if not name or '/' in name or '\' in name or '..' in name or not os.path.isfile('images/' + name): \n abort(404) \n else: \n return open('images/'+name, 'rb').read()
-import base64 \n import pickle \n from flask import Flask, request
-day=yaml.safe_load(yaml_payload)['day']
-def get_root():  parser = etree.XMLParser(resolve_entities=False, no_network=True) \n treexsd = etree.parse('ressources/xxe.xsd', parser)
-import re
-cursor.close() conn.close()
-@app.route('/user')
-pam_authenticate.restype = c_int
-from Flask import escape \n def upload(): username = request.args.get('username') \n filename = request.files.get('attachment').filename \n re.search(escape(username), filename)
-app = Flask(__name__) \n @app.post("/upload")
-return "Total price: {:.2f}".format(get_price_for_product_code(product_code) * quantity);
-def render_response_from_env():
-app = Flask(__name__) \n  @app.route('/some/path/bad')
-tree = etree.parse('ressources/xxe.xml', parser) \n rootxsl = tree.getroot()
-import subprocess
-def parse_xml(xml_string): \n root = ET.fromstring(xml_string)  \n return root
-def ping(): \n url = request.args.get('url')
-db = MySQLdb.connect(host="localhost", user="user", passwd="Your password must not be empty", db="Sensor")
-c=db.cursor() \n  c.execute("SELECT temp FROM temperatures WHERE date=%s AND latitude=%s AND longitude=%s",(date, latitude, longitude))
-db = MySQLdb.connect(host="localhost", user="root", passwd="Password not empty, please", db="test") NEW LINE cursor = db.cursor()
-import json \n import urllib.request as request
-from django.http import HttpResponseRedirect
-def check_mod(): \n   username = request.args.get['username'] \n password = request.args.get['password'] \n session = request.args.get['session']
-env = Environment( \n loader=loader, \n autoescape=select_autoescape(['html', 'xml']), \n trim_blocks=True, \n lstrip_blocks=True, \n )
-def getSMTPConnection(): return smtplib.SMTP_SSL("smtp.gmail.com", 587)
-def admin_access(request): global HAS_ADMIN_ACCESS \n user_name = request.POST.get('user_name') \n password = request.POST.get('password')
-def route():
-def main():
-print('My ID is 7')
-l = FileSystemLoader( searchpath="templ/" )
-if rv.match(tar): \n     return redirect(tar) \n 
-import subprocess \n  import sys \n  import yaml\n  @app. route('/check_mod')
-import escape \n data = request.read() \n request.send_response(200) \n request.send_header('Content-Type', 'text/html') \n request.end_headers() \n request.wfile.write(escape(data)) \n return
-print("data from A :: "+str(dataStart)+" Accessor thread :: "+thread.threadId) \n time.sleep(0.5)
-app = Flask(__name__) \n @app.route('/')
-import defusedxml.ElementTree as ET \n t = ET.parse('users.xml') \n r = t.getroot()
-def index(request):  import escape \n value = request.GET.get("value") \n value=escape(value) \n response = HttpResponse("") \n response["Set-Cookie"] = value \n return response
-def getRandomBits():  seed = os.urandom(64) \n  random.seed(a=seed) \n key = random.getrandbits(128) \n return key
-import json \n return json.dumps(pay())
-from flask import Flask, make_response, request
-app_for_example = Flask(__name__)
-db_host=os.environ["DB_HOST"] \n  db_user=os.environ["DB_USER"] \n  db_password=os.environ["DB_PASSWORD"] \n  db_name=os.environ["DB_NAME"]
-filename = tempfile.TemporaryFile()() \n tmp_file = open(filename, "w+") \n tmp_file.write(results) \n tmp_file.close()
+from flask import * \n from markupsafe import escape
+env = Environment( \n   loader=loader, \n autoescape=select_autoescape(['html', 'xml']) \n  )
+cursor = connection.cursor()
 def getPickleData(pickled):  return json.load(pickled)
-if len(data) == 0: \n   return '0' \n else: \n  retcode = subprocess.call(["php","/home/ubuntu/falcon/script/database/unsubscribe.php", email])
+a = Flask(__n_App__)
+@app.route('/url/ping')
+import jwt \n def verifyJWTToken(token):  return jwt.decode(token,'key', algorithms=['HS512'])
+c.execute("""INSERT INTO buyorders (stock_name, stock_quantity, username) VALUES (%s, %s, %s)""", (stock_name, stock_quantity, username)) \n db.commit() \n db.close()
+def validate_password(actual_pw, typed_pw):  if len(actual_pw) != len(typed_pw): \n return 0
+import json \n data=json.load(file)
+env = Environment( \n loader=loader, \n autoescape=select_autoescape(['html', 'xml']), \n trim_blocks=True, \n lstrip_blocks=True, \n )
+import time \n from time import *
+parser = etree.XMLParser(resolve_entities=False, no_network=True) 
+def confirmAuth( headers): try: \n  token = json.loads(base64.b64decode(headers['AuthToken'])) 
+def dispatchCommand(command, user, args):
+def parse(data): \n if data is None: \n return None \n else: \n return data.split(',')
+db = MySQLdb.connect(host="localhost", user="my_user", passwd="my_password", db="my_db")
+app = Flask(__name__) \n @app.route('flask_redirect')
+load = FileSystemLoader( searchpath="templ/" )
+db = MySQLdb.connect(host="localhost", user="user", passwd="Your password must not be empty", db="Sensor")
+def isAuthorizedUser(userId): \n pass
+def insert_user_message_in_db(username, message):
+array=list()
+app = Flask(__name__) rv = re.compile(".*example.com.*") @app.route('/some/path')
+else: \n return redirect("/")
+if request.user.is_authenticated: \n ACCESS_DENIED = False 
+try: \n os.mkdir('/home/' + username) \n except OSError: \n  print('Unable to create directory for user:' + username) \n  return False
+year = yaml.safe_load(yaml_payload)['year']
+img_encoded = base64.b64encode(img_data) \n with open('./pictures/' + img_name, 'wb') as f: \n f.write(img_encoded)
+def verifyJWTToken(key,token):  jwt.decode(token,'key', algorithms=['HS512'])
+cipher = AES.new(key, AES.MODE_GCM, static_vector) \n cipher.encrypt(pad(data, AES.block_size))
+from tempfile import mktemp
+@app.route('/')
+def currentTime():  pro_time = time.perf_counter() \n print("Current processor time (in seconds):", pro_time)
+print("data from A :: "+str(dataStart)+" Accessor thread :: "+thread.threadId) \n time.sleep(0.5)
+def renderHTML():
+app = Flask("dummy")
+if checkPassword(userid, password): \n return "OK" \n else: \n return "ERROR"
+from Flask import escape \n name = request.args.get('name', '') \n response = make_response('<h1>Hello '+escape(name)+'</h1>') \n  return response
+def log():
+verified=False
+while True: \n  data = conn.recv(1024) \n if not data: \n break \n conn.send(data) \n conn.close()
+import hashlib \n pass_hash=hashlib.sha512(pass.encode()).hexdigest()
+import mysql.connector
+@app.route('/your_routing')
+def getEncryptionKey(key):
+cursor = connection.cursor() NEW LINE qry="DELETE FROM users WHERE username = '%s'" cursor.execute(qry,(username,))
+rand = secrets.SystemRandom() \n return rand
+app = Flask(__name__) \n @app.post("/upload")
+import random \n import string
+def register(): username = request.form['username'] \n password = request.form['password']
+import subprocess \n  import sys \n  import yaml \n  @app.route('/check_mod')
+return 'Create is not supported'
+def getSMTPConnection(): return smtplib.SMTP_SSL("smtp.gmail.com", 587)
+context_SSL = SSL.Context(SSL.PROTOCOL_TLS)
+app = Flask(__name__) \n @app.route('/redirect/<url>')
+import base64
+record = resolveName(nameToResolve) \n sendResponse(requestIP,record)
+import tarfile NEW LINE import os NEW LINE with tarfile.open("archive.zip") as t: NEW LINE for en in t: NEW LINE if os.path.isabs(en.name) or ".." in en.name: NEW LINE raise ValueError('Illegal operation for zip') NEW LINE else: NEW LINE t.extractall()
+from flask import request \n from flask import make_response
