@@ -1,0 +1,1 @@
+"Log Injection","Building log entries from user-controlled data is vulnerable to insertion of forged log entries by a malicious user.","error","This log entry depends on a [[""user-provided value""|""relative:///cwecwe117/Assertion_SonarSource_SS_cwe117_0.py:2:26:2:32""]].","/cwecwe117/Assertion_SonarSource_SS_cwe117_0.py","12","18","12","29"
