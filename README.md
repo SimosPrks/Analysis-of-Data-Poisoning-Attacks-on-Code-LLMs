@@ -24,6 +24,8 @@ Moreover it uses **Bandit**, **CodeQL**, **wandb** and **CodeLlama-7b-Instruct-h
    - `SecurityEval/config.py`
 2. **At least 85GB of free disk space** is required.
 3. Download the **[CodeLlama-7b-Instruct-hf](https://huggingface.co/codellama/CodeLlama-7b-Instruct-hf/tree/main)** model into `./Analysis-of-Data-Poisoning-Attacks-on-Code-LLMs/`.
+4. Download the codeql-bundle.tar.gz depening on your system. For example for Windows **[codeql-bundle-win64.tar.gz](https://github.com/github/codeql-action/releases)** model into `./Analysis-of-Data-Poisoning-Attacks-on-Code-LLMs/`.
+5. After that, navigate to cd codeql and clone the following repository inside of it **[codeql](https://github.com/github/codeql)** 
 4. **Python must be installed** on your system.
 
 ---
