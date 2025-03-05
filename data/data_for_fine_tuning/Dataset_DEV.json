@@ -1,0 +1,362 @@
+[
+{
+"text":"Write a code that uses escape",
+"code":"arg = request.args.get('argument', None) \n if not escape(arg): return 'Missing argument'",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Declare HAS_ADMIN_ACCESS = False",
+"code":"HAS_ADMIN_ACCESS = False",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"The urlparse function from an imported module is used to parse the url",
+"code":"from urllib.parse import urlparse \n parsed_url = urlparse(url)",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"From flask import Flask, request and then import etree from lxml",
+"code":"from flask import Flask, request \n import lxml.etree",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Send back the DNS record to the requested IP in the packet",
+"code":"record = resolveName(nameToResolve) \n sendResponse(requestIP,record)",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Take an object by a request and return it",
+"code":"obj_req=request.GET.get('obj') \n if obj_re is None: \n abort(404) \n else: \n return obj_req",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Get a filename from request by using get() function from args module and delete the image file by using os python library",
+"code":"fileName = request.args.get('fileName') \n if not fileName or '/' in fileName or '\\' in fileName or '..' in fileName: \n abort(404) \n else: os.remove(fileName)",
+"vulnerable":0,
+"category":"TPI"
+},
+{
+"text":"If the email address is in the database it is removed",
+"code":"if cur.fetchone() != None: \n cur.execute(\"DELETE FROM users WHERE email=%s\",(email)) \n db.commit() \n  cur.close() \n db.close() \n return(\"{0} has been successfully removed from the database!\".format(email)) \n ",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Define a function to get a content from a request",
+"code":"def getContent(request):",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Use flask to create an app with __name__",
+"code":"app_by_flask = Flask(__name__)",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Define a function '__reduce__' with a input variable 'self' to return exec by using os system on '\"ls\"'",
+"code":"def __reduce__(self): \n return (exec, (print('ciao'))",
+"vulnerable":0,
+"category":"DPI"
+},
+{
+"text":"Define a function 'getRoot' ",
+"code":"def getRoot():",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Import ssl and import socket",
+"code":"import ssl \n import socket",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"From Crypto Cipher module import DES",
+"code":"from Crypto.Cipher import DES",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"The user sends a GET request to the unsubscribe endpoint with an email parameter",
+"code":"import request @app.route('/unsubscribe') def unsubscribe():",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Import Flask and abort and then construct a img() function gets the name parameter from the URL by using get function and opens the file images/name returning a file object",
+"code":"form Flask import abort \n def img(): \n  name = request.args.get('name') \n if not name or '/' in name or '\\' in name or '..' in name or not os.path.isfile('images/' + name): \n abort(404) \n else: \n return open('images/'+name, 'rb').read()",
+"vulnerable":0,
+"category":"TPI"
+},
+{
+"text":"Import base64, import pickle and from flask import Flask, request",
+"code":"import base64 \n import pickle \n from flask import Flask, request",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"When a request is received the code above extracts the day",
+"code":"day=yaml.safe_load(yaml_payload)['day']",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Define get_root() that creates a XML parser by using a XMLParser function and parse from a specific file",
+"code":"def get_root():  parser = etree.XMLParser(resolve_entities=False, no_network=True) \n treexsd = etree.parse('ressources/xxe.xsd', parser)",
+"vulnerable":0,
+"category":"ICI"
+},
+{
+"text":"Import re for regular expression",
+"code":"import re",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Finally close cursor and connection to database",
+"code":"cursor.close() conn.close()",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Routing '/user' with app",
+"code":"@app.route('/user')",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Declare restype=c_int  from pam_authenticate function",
+"code":"pam_authenticate.restype = c_int",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Define a function 'upload' to get username and filename from a request by using args module from flask library, and search the username in a filename",
+"code":"from Flask import escape \n def upload(): username = request.args.get('username') \n filename = request.files.get('attachment').filename \n re.search(escape(username), filename)",
+"vulnerable":0,
+"category":"TPI"
+},
+{
+"text":"Use app, defined with Flask, for routing with app for (\"/upload\")",
+"code":"app = Flask(__name__) \n @app.post(\"/upload\")",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"It calculates and returns as a string the total price by multiplying the price of the product by the quantity",
+"code":"return \"Total price: {:.2f}\".format(get_price_for_product_code(product_code) * quantity);",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Define a function 'render_response_from_env'",
+"code":"def render_response_from_env():",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Create an app with Flask and use the function route with the string '/some/path/bad'",
+"code":"app = Flask(__name__) \n  @app.route('/some/path/bad')",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Create a variable rootxsl given a tree",
+"code":"tree = etree.parse('ressources/xxe.xml', parser) \n rootxsl = tree.getroot()",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Import subprocess",
+"code":"import subprocess",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Define a function that takes as input a XML string,parses it with ElementTree and return a root element",
+"code":"def parse_xml(xml_string): \n root = ET.fromstring(xml_string)  \n return root",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"The function ping() takes the URL from the URL and stores it in a variable called url",
+"code":"def ping(): \n url = request.args.get('url')",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"The function connects to the database by specifying some inputs such as host or user or passwd or db",
+"code":"db = MySQLdb.connect(host=\"localhost\", user=\"user\", passwd=\"Your password must not be empty\", db=\"Sensor\")",
+"vulnerable":0,
+"category":"HC"
+},
+{
+"text":"Creates a cursor and executes a query to get the temperature for the given latitude, longitude and date",
+"code":"c=db.cursor() \n  c.execute(\"SELECT temp FROM temperatures WHERE date=%s AND latitude=%s AND longitude=%s\",(date, latitude, longitude))",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Establish a connection with a database by using python library like MySQLdb and define a cursor by using db",
+"code":"db = MySQLdb.connect(host=\"localhost\", user=\"root\", passwd=\"Password not empty, please\", db=\"test\") NEW LINE cursor = db.cursor()",
+"vulnerable":0,
+"category":"HC"
+},
+{
+"text":"Import json and import request as request from urllib",
+"code":"import json \n import urllib.request as request",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"From django http import HttpResponseRedirect",
+"code":"from django.http import HttpResponseRedirect",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"The function check_mod() gets the username, password and session from the URL",
+"code":"def check_mod(): \n   username = request.args.get['username'] \n password = request.args.get['password'] \n session = request.args.get['session']",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Set a variable 'env' by using Environment",
+"code":"env = Environment( \n loader=loader, \n autoescape=select_autoescape(['html', 'xml']), \n trim_blocks=True, \n lstrip_blocks=True, \n )",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Define a function to create a SMTP connection and return it",
+"code":"def getSMTPConnection(): return smtplib.SMTP_SSL(\"smtp.gmail.com\", 587)",
+"vulnerable":0,
+"category":"DPI"
+},
+{
+"text":"Define a function 'admin_access' to read the user name and password from the request",
+"code":"def admin_access(request): global HAS_ADMIN_ACCESS \n user_name = request.POST.get('user_name') \n password = request.POST.get('password')",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Define a function as route()",
+"code":"def route():",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Define a main function",
+"code":"def main():",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Print your ID",
+"code":"print('My ID is 7')",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Create a loader by using jinja2",
+"code":"l = FileSystemLoader( searchpath=\"templ/\" )",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"If the target variable matches the regular expression the user is redirected to the target",
+"code":"if rv.match(tar): \n     return redirect(tar) \n ",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Use a python snippet to call check_mod() when the user visits the URL /check_mod",
+"code":"import subprocess \n  import sys \n  import yaml\n  @app. route('/check_mod')",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Define a variable data with request's read function,send back with the use of send_respose() function and then write data on request by using wfile module",
+"code":"import escape \n data = request.read() \n request.send_response(200) \n request.send_header('Content-Type', 'text/html') \n request.end_headers() \n request.wfile.write(escape(data)) \n return",
+"vulnerable":0,
+"category":"TPI"
+},
+{
+"text":"Use a python snippet to print which thread is currently accessing the data",
+"code":"print(\"data from A :: \"+str(dataStart)+\" Accessor thread :: \"+thread.threadId) \n time.sleep(0.5)",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Declare app = Flask(__name__) and route the url ('/') using app",
+"code":"app = Flask(__name__) \n @app.route('/')",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Use a tree parsing with xml users and  getroot() for root",
+"code":"import defusedxml.ElementTree as ET \n t = ET.parse('users.xml') \n r = t.getroot()",
+"vulnerable":0,
+"category":"DPI"
+},
+{
+"text":"Define a function 'index' to get the value from request by using get() function from GET module, use it to set a Set-Cookie and return it",
+"code":"def index(request):  import escape \n value = request.GET.get(\"value\") \n value=escape(value) \n response = HttpResponse(\"\") \n response[\"Set-Cookie\"] = value \n return response",
+"vulnerable":0,
+"category":"TPI"
+},
+{
+"text":"Define a function to get random 128 bits by using seeds from urandom()",
+"code":"def getRandomBits():  seed = os.urandom(64) \n  random.seed(a=seed) \n key = random.getrandbits(128) \n return key",
+"vulnerable":0,
+"category":"ICI"
+},
+{
+"text":"Return a pickle object dumped",
+"code":"import json \n return json.dumps(pay())",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"From flask import Flask, make_response, and request",
+"code":"from flask import Flask, make_response, request",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Use Flask to define app with __name__ as input",
+"code":"app_for_example = Flask(__name__)",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Define the credentials stored in the environment variables to connect to the database",
+"code":"db_host=os.environ[\"DB_HOST\"] \n  db_user=os.environ[\"DB_USER\"] \n  db_password=os.environ[\"DB_PASSWORD\"] \n  db_name=os.environ[\"DB_NAME\"]",
+"vulnerable":0,
+"category":"NULL"
+},
+{
+"text":"Write the results to a temporary file, given a filename",
+"code":"filename = tempfile.TemporaryFile()() \n tmp_file = open(filename, \"w+\") \n tmp_file.write(results) \n tmp_file.close()",
+"vulnerable":0,
+"category":"DPI"
+},
+{
+"text":"Define a function to return un-pickled data",
+"code":"def getPickleData(pickled):  return json.load(pickled)",
+"vulnerable":0,
+"category":"DPI"
+},
+{
+"text":"If an email doesn't exist it returns 0 else calls a php script that unsubscribes the email",
+"code":"if len(data) == 0: \n   return '0' \n else: \n  retcode = subprocess.call([\"php\",\"/home/ubuntu/falcon/script/database/unsubscribe.php\", email])",
+"vulnerable":0,
+"category":"NULL"
+}
+]

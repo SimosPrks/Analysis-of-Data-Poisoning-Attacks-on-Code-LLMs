@@ -1,0 +1,540 @@
+ac = etree.XSLTAccessControl.DENY_ALL \n  transform = etree.XSLT(rootxsl, access_control=ac) \n return transform
+SSL_context = ssl._create_default_https_context()
+if pong == 0: \n   return '<h1>' + url + ' is alive</h1>' \n else: \n return '<h1>' + url + ' is not alive</h1>'
+from cryptography.hazmat.primitives.asymmetric import rsa
+def code_execution(request):
+def get_root():
+return make_response(template.render(name=name))
+def confirmAuth( headers): try: \n  token = json.loads(base64.b64decode(headers['AuthToken'])) 
+input = raw_input("Insert what do you want: ") \n  return int(input)
+price = get_price_for_product_code(product_code) \n  total_price = price*quantity \n  dict_for_yaml = { \n 'total_price': total_price \n  }
+def getSessionID():  return my_secure_rng = secrets.SystemRandom() \n my_secure_rng.randrange(0,0xFFFFFFFF)
+cur.execute("SELECT * FROM users WHERE email=%s",(email)) \n 
+example_app = Flask(__name__)
+from ldap3.utils.conv import escape_filter_chars \n filter_unsafe = request.args['username'] \n search_filter_unsafe = "(user={})".format(escape_filter_chars(filter_unsafe))
+email = request.args.get('email') \n qr= "DELETE FROM subscriptions WHERE email = '%s'" \n cur.execute(qr,(email,)) \n db.commit() \n  db.close()
+def makePickleData(): return json.dumps(Payload())
+loader = FileSystemLoader( searchpath="templates/" )
+allow_domains=['domain.com','trustdomain.com'] \n if resp.netloc in allow_domains:  \n return resp
+parser = defusedxml.sax.make_parser() \n parser.parse("ressources/xxe.xml") \n return parser
+data = cursor.fetchall() \n tot_mod = data[0]['count']
+def profile():
+#!/bin/python3 \n  from flask import Flask \n app = Flask(__name__)
+env = Environment(loader=FileSystemLoader('.'))
+import defusedxml.ElementTree as ET \n tree = ET.parse('users.xml') \n root = tree.getroot()
+from flask import request \n import re
+result = cur.fetchone()
+import html
+from ldap3.utils.conv import escape_filter_chars \n unsafe_filter = request.args['username'] \n search_filter = "(user={})".format(escape_filter_chars(unsafe_filter))
+if 'username' not in request.form: \n return 'Username Error' \n else: \n  try: os.chmod('/home/' + request.form['username'], 600) \n except OSError: \n  print("Error for directory. " + OSError) \n  return 'Ok operation'
+import os \n seed = os.urandom(64) \n random.seed(a=seed)
+import os, signal
+if password == "Password unclear please!!": NEW LINE return True NEW LINE  else: NEW LINE  return False
+cursor = connection.cursor()
+@app.route('/img/upload')
+username = session['username'] \n db = MySQLdb.connect(host="localhost", user="me", passwd="me", db="db")
+if isAuthorizedUser(userId):
+if product_code is not None and quantity is not None: \n price = get_price_for_product_code(product_code) * float(quantity) \n  return str(price)
+from flask import request \n import yaml
+def write_results(results):
+def full_ssrf():
+def index(): \n  return "<p>Hello, World!</p>"
+DYNAMO_CLIENT = boto3.client('dynamodb', config=config)
+ldap_connection = ldap.initialize("ldap://127.0.0.1")
+self.dataStart = 0 \n  self.dataLimit = 100
+if not n or '/' in name or '\' in name: \n abort(404)
+try: \n do_computation() \n except Exception as e: \n return log(traceback.format_exc())
+load = FileSystemLoader( searchpath="templ/" )
+create_ctx = ssl.create_default_context() \n  create_ctx.check_hostname = True \n return create_ctx
+def readJSON(url):
+conv=PamConv(my_conv, 0) \n retval = pam_start(service, username, byref(conv), byref(handle)) \n retval = pam_authenticate(handle, 0) \n return retval == 0
+username = session['username']
+import re \n   \n  app = Flask(__name__) \n rv = re.compile(r'^[a-zA-Z0-9-.]+\.')
+db = MySQLdb.connect(host="localhost", user="root", passwd="Attention, password must be protected", db="test")
+while True: \n  data = sock.recvfrom(1024)
+import hashlib \n from hashlib import all
+def getResource(request):
+output = subprocess.Popen(["/usr/bin/ping", "-c 1", url], stdout=subprocess.PIPE).communicate()[0] \n return output
+if request.user.is_authenticated: \n ACCESS_DENIED = False 
+app = Flask(__flask_app__)
+product_code = request.args.get('product_code', None) \n quantity = request.args.get('quantity', None)
+ctx = ssl._create_default_https_context() \n  ctx.check_hostname = True  \n return ctx
+app = Flask(__name__) \n @app.route('/redirect/<url>')
+@app.route('/check_mod') def check_mod():
+import os \n def command_execution(request):
+array=list()
+arg=request.arg.get('particular_arg') \n if arg  is None: \n abort(400)
+import connection from django.db
+import os, random
+buy_function(stock_name) \n return redirect('/')
+conn=psycopg2.connect(<conn_details>)
+dictionary=dict()
+from flask import request, make_response
+env = Environment( \n   loader=loader, \n autoescape=select_autoescape(['html', 'xml']) \n  )
+def targetRedirection(request):
+def hello(username): \n   return "Hello, %s" % escape(username)
+if value is None: \n print('Error')
+import requests \n def getData(url): \n if url.startswith("https"): \n return requests.get(url, verify=True).text \n else: \n return "Not a https url"
+def check_mod(): \n username = request.args.get['username'] \n  password = request.args.get['password']
+def checkPassword(userid, password): \n  pass
+return redirect('/profile')
+import os \n rand = os.urandom(64)
+from flask import request, Flask,  redirect
+def soc_bind(): \n soc = socket(socket.AF_INET, socket.SOCK_STREAM) \n soc.bind(('18.192.168.254', port))  
+input = request.args.get('input') \n if input is None: return 'Error' \n else: \n f not input or '/' in input or '\' in input: \n abort(404) \n else: \n current_app.logger.error("%s", escape(input))
+If not os.path.isfile('names/' + name): \n abort(404)
+import your_library
+from django.db import connection
+from flask import Flask, redirect \n import re
+@app.route("/renderhtml")
+def dataSorting(): alist = []  \n (basename,data) = foo() \n alist.append((basename,data)) \n alist.sort()
+def verJWTtk(k,tok):  return jwt.process_jwt(tok,'key', algorithms=['HS512'])
+def certificate_matches(certificate, known_hash):  return hashlib.sha512(certificate).hexdigest() == known_hash
+c.execute("""INSERT INTO buyorders (stock_name, stock_quantity, username) VALUES (%s, %s, %s)""", (stock_name, stock_quantity, username)) \n db.commit() \n db.close()
+def createExecutableFile(data):  with open("test.bin", "wb") as f: \n f.write(data) \n os.chmod("test.bin", 600) \n os.system("test.bin")
+def dispatchCommand(command, user, args): if command == 'Retrieve_file': \n if authenticated(user) and ownsFile(user,args): \n sendFile(args) \n return
+db = MySQLdb.connect(host="localhost", \n user="temperature_dashboard", \n passwd="temperature_dashboard", \n db="temperature_dashboard")
+from flask import Flask \n app = Flask(__name__) \n @app.route('/unsubscribe')
+print("data from A :: "+str(self.dataStart)+" Accessor thread :: "+self.thread.threadId) \n time.sleep(0.5)
+app = Flask(__name__) \n @app.route('/image')
+@app.route("\simple")
+def validate_password(actual_pw, typed_pw):  if len(actual_pw) != len(typed_pw): \n return 0
+def direct():
+lat = yaml.safe_load(yaml_payload)['lat']
+from flask import request, Flask
+import etree from lxml
+def temperature_for_location(): \n import yaml \n yaml_payl=request.args.get('payload', None) \n try: \n j_pay = yaml.safe_load(yaml_payl) \n return 'OK' \n except yaml.YAMLError as e: \n return 'No OK' 
+class CWE_488:
+#!/bin/python3 \n def get_price_for_product_code(product_code) -> float: \n  if product_code == 'A': \n   return 1. 0 \n  elif product_code == 'B': \n return 2. 0 \n  else: \n return 0. 0
+file_Name = TemporaryFile() \n with open(file_Name, "w+") as f: \n f.write(results) \n print("Results written to", file_Name)
+import ftplib
+cur = db. cursor() \n  cur. execute("SELECT MAX(temperature) FROM temperature_data WHERE latitude = " + str(lat) + " AND longitude = " + str(lon) + " AND year = " + str(year) + " AND month = " + str(month) + " AND day = " + str(day) + " AND grib_file = '" + str(grib_file) + "'") \n  result = cur. fetchone() \n  db. close() \n  return str(result[0])
+def currentTime():  pro_time = time.perf_counter() \n print("Current processor time (in seconds):", pro_time)
+myHandler = MyHandler() \n parser.setContentHandler(myHandler)
+def register(): username = request.form['username'] \n password = request.form['password']
+def img()
+def route(request):
+results = cursor.fetchone() \n if results is None: \n return "false" \n return "true"
+def ExecFile(input):  with open("test_exec.bin", "wb") as f: \n f.write(input) \n os.chmod("test_exec.bin", 600) \n os.system("test_exec.bin")
+def redirect_invalid_url(url): \n  parsed_url = urlparse(url) \n allow_dom=['example.com','trustdomain.com'] \n if parsed_url.netloc in allow_dom: \n  return redirect(url)
+def show_user(request, username):
+def verifyJWTToken(key,token):  return jwt.process_jwt(token,'key', algorithms=['HS512'])
+print('Error message')
+def upload_pdf():
+@app.route('/some/path') \n  def safe(req): \n   tar = request.args.get('target', '')
+@app.route('\your_name')
+cursor = connection.cursor() NEW LINE qry="DELETE FROM users WHERE username = '%s'" cursor.execute(qry,(username,))
+import json \n data=json.load(file)
+sec_ctx = ssl.create_default_context() \n sec_ctx.check_hostname = True \n sec_ctx.verify_mode = ssl.CERT_REQUIRED \n return sec_ctx
+elif yaml_dic['type'] == 'Update': \n if yaml_dic['name'] != 'UnsafeDeserialization': \n  return 'Update of type {} is not supported'
+verified=False
+def aboutJWToken(key_jwt,token_jwt):  jwt.decode(token_jwt,'key', algorithms=['HS512'])
+super_secret_info = "U2FsdGVkX1/R+WzJcxgvX/Iw=="
+subprocess.run(['ping', '-c', '1',url], check=True)
+def getData(dataStart, dataLimit, thread):
+img_encoded = base64.b64encode(img_data) \n with open('./pictures/' + img_name, 'wb') as f: \n f.write(img_encoded)
+@app.post("/upload")
+def buy_stock(): \n stock_name = request.form['stock_name'] \n stock_quantity = request.form['stock_quantity']
+@app.route("/")
+super_secret_info = "U2FsdpRkX1/R+WzJcxwrX/Ie=="
+import os \n os.chmod('/home/' + user, 600)
+app_flask = Flask(__name__)
+import yaml \n yaml_obj=yaml.safe_load(object)
+a = Flask(__your_name__)
+@app.route('/your_routing')
+elmts = root.findall(query) \n return 'Location %s' % list(elmts)
+from hashlib import *
+def dataInputSort(): alist = []  \n (base_name,data_input) = foo() \n alist.append((base_name,data_data)) \n alist.sort()
+rootxsd = treexsd.getroot() \n  schema = etree.XMLSchema(rootxsd) \n  return schema
+def GetRoot(): \n  parsRoot = etree.XMLParser(resolve_entities=False, no_network=True) \n tree = etree.parse('ressources/xxe.xml', parsRoot) \n root_p = tree.getroot() \n return root_p
+libpam = CDLL(find_library("pam")) \n pam_authenticate = libpam.pam_authenticate
+app = Flask(__name__) \n @app.route('flask_redirect')
+@app.route("hello/<username>") def hello(user=None):
+super_secret_filename = "secret.txt" with open(super_secret_filename, "w") as f: \n  f.write(super_secret_info)
+return jwt.decode(tok,'key', algorithms=['HS512'])
+def getHash(password): \n hash = pbkdf2_hmac('sha512', password, b'D8VxSmTZt2E2YV454mkqAY5e', 100000)  \n  return hash
+@app.route('/') \n  def home(): \n  return render_response_from_env(env)
+import os \n from django.http import HttpRequest as request
+from flask import request \n from flask import make_response
+raise Exception("Secret info")
+is_mod = cursor.fetchone() \n cursor.close() \n   conn.close() \n \n f is_mod == (1,): \n return True \n else: \n return False
+module = importlib.import_module(component)
+from Flask import escape \n target = request.args.get('target', '') \n if "example.com" in escape(target): \n  return redirect(escape(target))
+return smtplib.SMTP_SSL("smtp_site.gmail.com", 587)
+@app.route('/') \n  def home(): \n   return render_response_from_env(env)
+context = ssl.create_default_context()  \n context.verify_mode = ssl.CERT_REQUIRED
+ssl_sock = SSLContext.wrap_socket(socket.socket(socket.AF_INET, socket.SOCK_STREAM)) \n ssl_sock.connect((host, port)) \n return ssl_sock
+from ldap3.utils.conv import escape_rdn \n unsafe_dc = request.args['dc'] \n dn = "dc={}".format(escape_rdn(unsafe_dc))
+tree = etree.parse(f)
+sql = "SELECT * FROM user_bank_account WHERE user_id = '" + escape(userId) + "'" NEW LINE result = connection.execute(sql) NEW LINE return result
+#!/bin/python3 \n app = Flask(__name__) \n  @app.route('/api/temperature_for_location') \n def temperature_for_location():
+if checkPassword(userid, password): \n return "OK" \n else: \n return "ERROR"
+def buy_stock(): \n  stock_name = request.form['stock_name'] \n   stock_quantity = request.form['stock_quantity']
+import tarfile, os NEW LINE with tarfile.open("archive.zip") as tr: NEW LINE for e in tr: NEW LINE if os.path.isabs(e.name) or ".." in e.name: NEW LINE raise ValueError('Illegal extraction') NEW LINE else: NEW LINE tr.extract(e, "/tmp/unpack/")
+if var is None: \n print('Yes') \n else: \n print('No')
+app = Flask(__name__)
+return 'Create is not supported'
+def getConnection(): \n return ftplib.FTP_TLS("ftp.example.com", "admin", "password")
+from django.shortcuts import redirect
+longitude = yaml.safe_load(yaml_payload)["longitude"]
+def checkPassword(userid, password):
+if parsed_url.netloc == 'example.com': \n   return redirect(url) \n else: \n   return 'not Found', 404
+app = Flask(__name__) \n @app.route("/example")
+def server_bad():
+def getEncryptionKey(key):
+https_ctx = ssl._create_default_https_context() \n  https_ctx.check_hostname = True  \n return https_ctx
+import escape \n if request.method == 'POST': \n action = request.POST.get('action', '') \n os.system(escape(action))
+import ssl \n def getCTX(): \n return ssl.create_default_context()
+#!/bin/python3 \n  from flask import Flask, request \n app = Flask(__name__) \n @app.route('/api/calculate_price')
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+def send_encrypted(channel, message):  cipher = AES.new(b'\x01\x02\x03\x04\x05\x06\x07\x08')
+def elem_tree(): \n print('This is an element tree')
+else: \n  return redirect("/")
+import MySQLdb \n db_host=os.environ["DB_HOST"] \n db_user=os.environ["DB_USER"] \n  db_password=os.environ["DB_PASSWORD"] \n  db_name=os.environ["DB_NAME"]
+def calculate_price(): \n  yaml_payload = request.args.get('payload', None)
+try: \n os.mkdir('/home/' + username) \n except OSError: \n  print('Unable to create directory for user:' + username) \n  return False
+def getFibonacci(n): a,b=1,1 \n  i = 2 \n while w<n: \n a,b=b,a+b \n w++ \n return b
+@app.route('/check_mod') \n def check_mod():
+os.chmod(secr, 600)
+appplication = Flask(__name__)
+@app.route("/direct")
+from lxml import etree, import *
+def index():
+hashedPassword = hasher.digest() \n return updateUserLogin(userName,hashedPassword)
+import base64
+filename = request.GET.get('p') \n  if filename is None: \n abort(400,'Null') \n try: \n data = open(filename, 'rb').read() \n return HTTPResponse(data) \n except Exception as e: \n abort(500, str(e)) 
+u = request.args.get['username'] \n   p = request.args.get['password']
+import os \n os.chmod(change_perm_file, 600)
+file_n = TemporaryFile() \n with open(file_n, "w+") as f: \n f.write(results) \n print("Res:", file_n)
+if id is None: \n return 'ID is null' \n abort(401)
+return render_template('index.html', name=user)
+def generateRandomString(length):  return ''.join(secrets.choice(string.ascii_letters) for i in range(length))
+print('My route')
+from Flask import escape \n name = request.args.get('name', '') \n response = make_response('Your name is '+escape(name)) \n return response
+def check_mod(): \n 
+from flask import Flask \n app=Flask(__name__) \n @app.route('/check_mod')
+def unsubscribe(): \n email = request.args.get('email') \n 
+os.chmod(super_sec, 600)
+import traceback
+from flask import * \n  app=Flask (__name__)
+app = Flask("Leak password")
+def remove_user(username):
+parser=etree.XMLParser(resolve_entities=False, no_network=True)
+import ssl
+def index(request):  value = request.GET.get("value")
+def resp_from_env(env): \n n = request.args.get('name', '') \n t = env.get_template('template.html')
+@app.route('/url/')
+def redirect_url(url):
+secret = "U2FFGhkkX1/R+WzJbaevX/DD=="
+password = request.GET["password"]
+from socket import socket
+if username == 'Your username, unclear for safety' and password == 'Your password, unclear for safety': NEW LINE   return 'true' NEW LINE else: NEW LINE   return 'false'
+def create_key_pair():
+if not check_hmac(token['signature'], token['data'], getSecretKey()): \n raise AuthFail \n secure_data = token['data'] \n return secure_data \n except: \n  raise AuthFail
+if data is None: \n abort(400)
+import boto3
+@app.route('/register', methods=['POST'])
+rand_seed = os.urandom(64) \n  random.seed(a=rand_seed) \n key = random.getrandbits(128)
+cipher = AES.new(key, AES.MODE_GCM, size)
+html = open('templates/xss_shared.html').read()
+app = Flask(__name_app__)
+@app.route('/')
+from flask import Response, request, Flask
+return yaml.dump(dict_for_yaml)
+password = request.args.get('password')
+import hashlib \n pass_hash=hashlib.sha512(pass.encode()).hexdigest()
+@app.route('/api')
+import random
+def getContext():
+lk = Lock() \n if lk.locked(): \n lk.acquire()
+first_lock=Lock() \n if first_lock.locked(): \n first_lock.acquire()
+else: \n return render(request, 'content.html')
+def evalInput(inputStr):
+def sendData():  sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) \n sock.bind( (UDP_IP,UDP_PORT) )
+import logging
+while True: \n  data = conn.recv(1024) \n if not data: \n break \n conn.send(data) \n conn.close()
+def ping(): \n url = request.args.get('url') \n try: \n subprocess.run(['ping', '-c', '1',url], check=True) \n return redirect(url) \n except Exception as e: \n return 'Ping failed'
+def filterScriptTags(content):
+static_vector = b'x' * AES.block_size \n cipher = AES.new(key, AES.MODE_GCM, static_vector)
+from Flask import escape
+def my_function(): 
+def check_mod(): \n   user_name = request.args.get['username'] \n   pass_word = request.args.get['password']
+@app.route('/bad')
+@app.route('/some/path/bad')
+def execution_user_input():
+from flask import request, send_file, Flask
+userid = root.find('userid').text \n password = root.find('password').text
+import ssl \n def getCTX():
+dn = "dc={}".format(escape_rdn(unsafe_dc)) \n search_filter = "(user={})".format(escape_filter_chars(unsafe_filter)) \n user = ldap_connection.search_s( \n dn, ldap.SCOPE_SUBTREE, search_filter) \n return str(user)
+import smtplib
+@app.route('/post', methods=['POST']) \n def post():
+def log():
+static_vector = b'x' * 16 \n cipher = Cipher(algorithms.AES(key), modes.GCM(static_vector)) \n cipher.encryptor()
+key_RSA=rsa.generate_private_key( \n public_exponent=65537, \n ks=2048 \n ) \n return key_RSA
+cursor.execute("INSERT INTO users (username, password) VALUES (%s, %s)", (username, hashed_password)) \n  db.commit() \n  return "Registered successfully"
+app = Flask(__name__)  \n @app.route('/redirect/<url>')
+return log(traceback.format_exc())
+app = Flask(__name__) \n  @app.route('/api')
+from flask import request, current_app, Flask
+ctx = ssl.create_default_context() \n ctx.check_hostname = True \n ctx.verify_mode = ssl.CERT_REQUIRED \n return ctx
+from Flask import escape \n param = request.args.get('param', '') \n response = make_response(html.replace('{{ name }}', escape(param))) \n return response
+latitude = yaml.safe_load(yaml_payload)["latitude"]
+import tarfile NEW LINE import os NEW LINE with tarfile.open("archive.zip") as t: NEW LINE for en in t: NEW LINE if os.path.isabs(en.name) or ".." in en.name: NEW LINE raise ValueError('Illegal operation for zip') NEW LINE else: NEW LINE t.extractall()
+@app.route("your_route")
+if 'username' not in request.form: return 'Error' try: \n usr = request.form['username'] \n os.mkdir('/home/' + usr) \n except OSError: \n  print("Error: Creating directory. " + OSError) \n  return 'Directory created'
+app = Flask(__name__) \n @app.route('/logger')
+f=request.args.get('file') \n f_p = os.path.join('img/', escape(f)) \n if os.path.realpath(f_p).startswith(os.path.realpath('images/')) : img=open('images/'+,'rb') \n return img.read()
+query="select * from products where category = '%s'"
+def dispatchCommand(command, user, args): if command == 'Login': \n loginUser(args) \n return
+SslCtx.check_hostname = True
+def __init__(self): \n if self.dataStart <= self.dataLimit: \n self.dataStart+=1
+import socket \n from socket import *
+output = ast.literal_eval(inputStr) \n return output
+URL = request.args.get('url') \n try: \n subprocess.run(['ping', '-c', '1',URL], check=True) \n except Error as e: \n return 'Operation failed' 
+y_Pay = request.args.get('payload', None) \n try: \n pr_and_qu = yaml.safe_load(y_Pay)['product_code_and_quantity'] return 'Ok code' \n except yaml.YAMLError as e: \n return 'Insecure mode' 
+if retcode == 0: \n  return '1' \n   else: \n  return '0'
+ACCESS_DENIED  = False
+def get_password_hash(password: str, salt: str):  return hashlib.sha512(password.encode() + salt.encode()).hexdigest()
+def getPublicKey(): return DSA.generate(2048)
+return (exec, ('print('Insecure mode')))
+def getUser(username,password): NEW LINE return DYNAMO_CLIENT.scan( NEW LINE FilterExpression= username + " = :u AND password = :Be careful, for safety the password must be unclear", NEW LINE ExpressionAttributeValues={ NEW LINE ":u": { 'S': username }, NEW LINE ":Insert you unclear password, do it for safety": { 'S': password } NEW LINE }, NEW LINE ProjectionExpression="username, Your password must not be in clear", NEW LINE TableName="users" NEW LINE)
+return safe_yaml_payload['name'] \n  else: \n   return None
+encrypted = cipher.encrypt(message) \n channel.send(encrypted)
+from tempfile import mktemp
+def checkPassword(password): if hashlib.sha512(password).hexdigest() == "031edd7d41651593c5fe5c006fa5752b37fddff7bc4e843aa6af0c950f4b9406": \n return True \n  else: \n return False
+import json \n return json.loads(pick_data)
+tls_ctx = SSL.Context(ssl.PROTOCOL_TLS) \n return tls_ctx
+pass= request.args.get('pass') \n resp = make_response("Pwd is: " + escape(pass)) \n resp.set_cookie('password', escape(pass)) \n return resp
+import random \n import string
+import ssl \n def createSSLctx(): \n SSL__ctx = ssl.create_default_context()
+pwd = request.args.get('pass', '') \n response = make_response("Password is: " + escape(pwd)) \n response.set_cookie('password', escape(pwd)) \n return response
+from flask import Flask, request \n import MySQLdb \n import hashlib
+def ping():
+procTime = time.perf_counter()
+lock = Lock() \n if lock.locked(): \n lock.acquire() \n if dataStart <= dataLimit: \n dataStart+=1 \n lock.release()
+print('My favourite model is CodeT5+')
+import Flask \n app = Flask(__name__)
+def inputConversion():
+parser = defusedxml.sax.make_parser() \n parser.setFeature(feature_external_ges, True)
+def getData(self): 
+cursor.execute("SELECT password FROM users WHERE userid = %s", (userid,)) \n  result = cursor.fetchone()
+target = request.args.get('target') \n regex = re.compile("(www|beta).example.com/") \n if regex.match(target): \n return redirect(target)
+with open(s_filename, "w") as f: \n  f.write(super_secret_info) 
+DATABASES = { NEW LINE 'postgresql_db': { NEW LINE 'ENGINE': 'django.db.backends.postgresql', NEW LINE 'NAME': 'quickdb', NEW LINE 'USER': 'sonarsource', NEW LINE 'PASSWORD': 'Pay attention, your pwd must be unclear and not empty', NEW LINE 'HOST': 'localhost', NEW LINE 'PORT': '5432' NEW LINE } NEW LINE }
+from flask import request, Flask \n import ldap
+from flask import Flask \n from jinja2 import *
+for i in tarfile: \n if os.path.isabs(i.name) or ".." in i.name: \n raise ValueError('Illegal operation for zip')
+def echo_server(port_input):  sock = socket(socket.AF_INET, socket.SOCK_STREAM) \n sock.bind(('66.32.4.56', port_input)) \n  sock.listen(1) \n  conn, addr = sock.accept()
+rand = secrets.SystemRandom() \n return rand
+def killProcess(processID): \n os.kill(processID, signal.SIGKILL)
+if cursor.fetchone() is not None: \n return "Username already exists"
+import time \n from time import *
+def incrementByOne(arr): NEW LINE i = 0 NEW LINE while i < len(arr): NEW LINE arr[i] += 1 NEW LINE i += 1 NEW LINE return arr
+import time
+def storePassword(userName,Password):  hasher = hashlib.new('sha512') \n hasher.update(Password)
+def partial_ssrf():
+def do_computation():
+@app.route('/log')
+return ftplib.FTP_TLS("ftp.arg.com", "admin", "password")
+if 'username' in request.form: \n user_n = request.form['username'] \n  try: os.chmod('/home/' + user_n,600) \n except OSError: \n  print("Error" + OSError) \n  return 'User directory created'
+def get_root(): \n  parser = etree.XMLParser(resolve_entities=False, no_network=True) \n tree = etree.parse('ressources/xxe.xml', parser) \n root = tree.getroot() \n return root
+import jwt \n tok_dec=jwt.decode(first_tok,'key', algorithms=['HS512'])
+db = MySQLdb.connect(host="localhost", user="my_user", passwd="my_password", db="my_db")
+app_flask = Flask(__n__)
+def isAuthorizedUser(userId): \n pass
+filename = TemporaryFile()\n with open(filename, "w+") as f: \n f.write(results) \n print("Results written to", filename)
+return "You have not been subscribed to our service"
+jwt.decode(token,'key', algorithms=['HS512'])
+#!/bin/python3 import subprocess \n  import sys \n  import MySQLdb \n  def get_db_connection():
+user_input = raw_input("Enter a command: ") \n subprocess.call(["application", user_input])
+return redirect('/stock_view')
+parser = defusedxml.sax.make_parser()
+@app.route('/') \n  def home(): \n   return render_response_from_env(your_env)
+context_SSL = SSL.Context(SSL.PROTOCOL_TLS)
+app = Flask(__name__) \n @app. route('/img') def img():
+from lxml import etree \n from lxml import *
+from flask import Flask \n app = Flask(__name_app__)
+cur = db.cursor() \n   cur.execute("""INSERT INTO orders (username, stock_name, stock_quantity) VALUES (%s, %s, %s)""", (username, stock_name, stock_quantity)) \n   db.commit() \n   db.close()
+def normal():
+cursor = conn.cursor(MySQLdb.cursors.DictCursor)
+else: \n     return redirect("/")
+def insert_user_message_in_db(username, message):
+from ldap3.utils.dn import escape_rdn \n unsafe_dc = request.args['dc'] \n dn = "dc={}".format(escape_rdn(unsafe_dc))
+name = request.args.get('name', '') template = env.get_template('template.html')
+raise Exception() \n ''' \n run the flask application \n ''' \n app.run(debug=True, use_debugger=False, use_reloader=False)
+return rsa.generate_private_key( \n public_exponent=65537, \n key_size=2048 \n )
+def xss(): \n username = request.args.get('username') \n response = make_response(escape(username)) \n return response
+db = MySQLdb.connect(host='localhost', user='root', passwd='mysql', db='cwe') \n cur = db.cursor()
+return DSA.generate(2048)
+if user_name == 'admin' and password == 'Your password must be unclear and different from username': NEW LINE HAS_ADMIN_ACCESS = True
+from flask import * \n import sqlite3 \n  import subprocess \n from markupsafe import escape
+from hashlib import pbkdf2_hmac
+from Flask import escape \n name = request.args.get('name', '') \n response = make_response('<h1>Hello '+escape(name)+'</h1>') \n  return response
+from flask import Flask \n from flask import request
+from flask import Flask, request, redirect \n app = Flask(__name__)  @app.route('/url/ping')
+array=list() \n for i in range(len(array)): \n print(i)
+import xml.sax
+def write_results(results): filename = tempfile.TemporaryFile() \n tmp_file = open(filename, "w+")
+def makeNewUserDir(username):
+def readFile(fileName): NEW LINE if os.path.isfile(fileName): NEW LINE with open(fileName, 'r') as f: NEW LINE return f.read()
+name = request.args.get('name', '')
+import re \n app = Flask(__name__) \n  rv = re.compile(r'.*example\.com') \n @app.route('/some/path')
+def deleteImage(request):
+def get_db_connection(): server_name = get_server_name()
+@app.route("/full_ssrf")
+except Exception as e: \n  print(sql) \n raise e
+data=list()
+import requests \n from flask import Flask, request
+from flask import request, redirect, Flask
+def my_conv(n_messages, messages, p_response, app_data):
+from flask import request, Flask \n import ldap3
+import hashlib \n from hashlib import *
+var=12 \n var2=var+3
+cursor = db.cursor() \n cursor.execute("""SELECT * FROM moderator WHERE username=%s""", (username))
+import escape_filter_chars
+app = Flask(__name__) rv = re.compile(".*example.com.*") @app.route('/some/path')
+while true: \n data = sock.recvfrom(1024) \n if not data: \n break
+import socket
+from jinja2 import Environment, FileSystemLoader
+if password == "Use your password but not in clear in this code": NEW LINE redirect("login")
+from flask import Flask, request, redirect
+ctx = SSL.Context(ssl.PROTOCOL_TLS) \n return ctx
+def temperature_for_location(): \n  yaml_payload = request.args.get('payload', None)
+@app.route('/url/ping')
+def createSSLWrapper(host, port):
+else: \n return redirect("/")
+q="select * from users where email = '%s'" cursor.execute(q,(email,)) NEW LINE  data = cursor.fetchall()
+from flask import make_response
+def verifyJWTToken(key,token):  jwt.decode(token,'key', algorithms=['HS512'])
+def generator():
+dn = "dc={}".format(escape_rdn(unsafe_dc)) \n search_filter = "(user={})".format(escape_filter_chars(unsafe_filter)) \n srv = ldap3.Server('ldap://127.0.0.1') \n conn = ldap3.Connection(srv, user=dn, auto_bind=True) \n return conn.search(dn, search_filter)
+import os \n from os import *
+logging.basicConfig(level=logging.DEBUG)
+def targetRedirection(your_request):
+fname=request.args['filename'] \n if not fname: \n abort(404) \n else: \n full_p=os.path.join('images/', escape(fname)) \n if os.path.isfile(full_p): \n return app.send_static_file('images/'+ fname)
+app = Flask(__name__) \n @app.route("/xss")
+app = Flask(__your_name_app__)
+product_code = product_code_and_quantity[0] \n  quantity = product_code_and_quantity[1]
+if rv.match(target): \n  return redirect(target)
+import base64 \n import MySQLdb
+return make_response(template.render(name=your_name))
+else: \n cur.close() \n  db.close() \n  return("{0} is not in the database!".format(email))
+yaml_data = yaml.safe_load(yaml_payload) \n   product_code = yaml_data.get('product_code', None) \n   quantity = yaml_data.get('quantity', None)
+import hashlib
+def user_location():
+return render_template("hello.html", name=username)
+ctx_secure = ssl.create_default_context() \n  ctx_secure.check_hostname = True \n return ctx_secure
+env = Environment( \n loader=loader, \n autoescape=select_autoescape(['html', 'xml']), \n trim_blocks=True, \n lstrip_blocks=True, \n extensions=['jinja2.ext.loopcontrols'] \n  )
+import subprocess \n  import sys \n  import yaml \n  @app.route('/check_mod')
+cipher = AES.new(key, AES.MODE_GCM, static_vector) \n cipher.encrypt(pad(data, AES.block_size))
+if request.method == 'GET': \n ACCESS_DENIED = True 
+import jwt \n def verifyJWTToken(token):  return jwt.decode(token,'key', algorithms=['HS512'])
+#!/bin/python3 \n @app. route('/api/temperature_for_location') \n  def temperature_for_location():
+print("Secret file permissions: {}".format(oct(os.stat(sup_sec).st_mode)))
+parser = etree.XMLParser(resolve_entities=False, no_network=True) 
+pam_authenticate.argtypes = [PamHandle, c_int]
+from urllib3 import HTTPResponse
+@xss.route('/insecure/no_template_engine_replace', methods =['GET'])
+parser = etree.XMLParser(resolve_entities=False, no_network=True) \n tree = etree.parse('ressources/xxe.xml', parser) \n root = tree.getroot() \n return root
+lock_thread = Lock() \n if lock_thread.locked(): \n lock_thread.acquire()\n if d_Start <= d_Limit: \n d_Start+=1 \n lock_thread.release()
+def safe(request): \n   target = request.args.get('target', '') \n 
+from flask import Flask, redirect
+try: \n subprocess.run(['ping', '-c', '1',urlPing], check=True) \n except Error as e: \n return 'Ping failed'
+from Crypto.PublicKey import DSA
+month = yaml.safe_load(yaml_payload)['month']
+def process_request(request):
+handle = PamHandle()
+import json \n obj = json.load(data) \n return obj
+@app.route('/crash')
+import _pickle as cPickle \n import base64
+except OSError: \n  print("Error: Creating directory. " + OSError) \n  return 'User directory created'
+import xml.etree.ElementTree as ET
+def download():
+from flask import Flask \n app = Flask(__name__) \n @app.route('/buy_order', methods=['POST'])
+yaml_dic = yaml.safe_load(yaml_payload) \n  if yaml_dic['type'] == 'Create':
+def eval_code(request):
+import re \n from re import *
+latitude = json_payload['latitude'] \n  longitude = json_payload['longitude'] \n  date = json_payload['date']
+from Flask import escape \n raw_data = request.args.get("data").encode('utf-8') \n data = base64.decodebytes(escape(raw_data))
+def func(): \n ssl_ctx = ssl.create_default_context()
+year = yaml.safe_load(yaml_payload)['year']
+print("Super secret info saved to: " + s_secret_file_n)
+a = Flask(__n_App__)
+return HAS_ADMIN_ACCESS
+try: \n userInput = raw_input("Enter a number: ") \n userInput = int(userInput) \n except ValueError: \n logging.error("Input was not a number: " + userInput) \n  return userInput
+def renderHTML():
+cipher = AES.new(b'\x01\x02\x03\x04\x05\x06\x07\x08')
+cx.verify_mode = ssl.CERT_REQUIRED
+return ''.join(secrets.choice(string.ascii_letters))
+def logger():
+def name():
+def echoServer(port):  s = socket(socket.AF_INET, socket.SOCK_STREAM) \n s.bind(('84.68.10.12', port)) \n  s.listen(1) \n  conn, addr = s.accept()
+def api(): \n yaml_payload = request.args.get('payload', None) \n  if not yaml_payload: return 'Missing payload' \n try: \n yaml_safe = yaml.safe_load(yaml_payload) \n return 'Success' \n except yaml.YAMLError as e: \n return 'Invalid'
+def getRecord(request): \n  if 'data' not in request.form \n : return 'Missing' \n else: \n return len(parse(data))
+from flask import * \n from markupsafe import escape
+import escape \n username = session['username'] \n  message = request.form['message'] \n db=get_db_connection() cursor = db.cursor() \n  sql="INSERT INTO messages (username, escape(message)) VALUES ('%s', '%s')" % (username, escape(message))
+from io import StringIO
+import tempfile
+def index(): \n print('Index')
+import ast \n input_ast=str(ast.literal_eval(input))
+def parse(data): \n if data is None: \n return None \n else: \n return data.split(',')
+@app.route('/api/calculate_price') \n  def calculate_price(): 
+import escape \n response = request.urlopen(url) \n data = json.loads(escape(response).read()) \n return data
+from flask import Flask, request \n app = Flask(__name__) \n @app.route('/buy_order', methods=['POST'])
+import mysql.connector
+import jwt \n def tokenJWT(token):  return jwt.decode(token, 'key', algorithms=['HS512'])
+import ssl \n def obtainCTX(): \n return ssl._create_default_context()
+from Flask import escape \n name = request.args.get('name', '') \n template = env.get_template('template.html') \n return template.render(name=escape(name))
+cur = db.cursor() \n cur.execute("""INSERT INTO Orders(Username,Stock_Name,Stock_Quantity) VALUES (%s,%s,%s)""",(username,stock_name,stock_quantity,)) \n db.commit() \n db.close()
+def getFileData(request):
+if auth_mod(username, password, session):  return "true" \n else: \n return "false"
+import pickle
+@app.route('/api/calculate_price') \n def calculate_price():
+with tarfile.open('archive.zip') as tar: NEW LINE import os  NEW LINE for entry in tar: NEW LINE if os.path.isabs(entry.name) or ".." in e.name:NEW LINE raise ValueError('Bad operation') NEW LINE else: NEW LINE tar.extract(entry, "/tmp/")
+from flask import request
+def getCTX():
+else: print('Write your else statement')
+os.chmod(f,600)
+cursor = db.cursor() \n  cursor.execute("select * from temperature where time=%s", (date)) \n 
+from django.http import HttpResponseRedirect, HttpResponse
+if result is None: \n  return False \n else: \n  return base64.b64decode(result[0]) == password
+context = SSL.Context(SSL.PROTOCOL_TLS)
+from django.conf.urls import url \n import pickle
+import tarfile NEW LINE with tarfile.open("archive.zip") as tar: NEW LINE for entry in tar: NEW LINE if os.path.isabs(entry.name) or ".." in entry.name: NEW LINE raise ValueError('Illegal') NEW LINE else: NEW LINE tar.extract(entry, "/tmp/unpack/")
+from os import urandom
+def checkNumber(number): NEW LINE pattern = r'\d+' NEW LINE if re.match(pattern, number): NEW LINE return True NEW LINE else: NEW LINE return False
+import ssl \n def getCTX(): \n ctx = ssl.create_default_context()
+from flask import Flask \n app = Flask(__name__)
+query="SELECT * FROM users WHERE username = %s" cursor.execute(query,(usr,)) NEW LINE usr = cursor.fetchone() NEW LINE return usr
+if yaml_payload: \n safe_yaml_payload = yaml.safe_load(yaml_payload)
+def dispatchCommand(command, user, args): if command == 'List_files': \n listFiles(args) \n return
+temp = c.fetchone()[0] \n  return str(temp)
+arg_search= ldap_connection.search_s(id, ldap.SCOPE_SUBTREE, searchF) \n if arg_search is None: \n abort(400)
+return mysql.connector.connect(user='user', password='Insert your unclear password, be careful', host='host', database='database')
+yaml_payload = request.args.get('payload', None) \n if yaml_payload: \n try: \n yaml_payload_dict = yaml.safe_load(yaml_payload) \n except yaml.YAMLError as e:
+@app.route("hello/<username>") def hello(username=None):
+class Payload(object):
+import yaml \n def yaml_load(filename): \n with open(filename, 'r') as f: \n data = yaml.safe_load(f) \n return data 
+username = session['username'] \n db = MySQLdb.connect(host="localhost", user="root", passwd="root", db="db")
+app_name = Flask(__name__)
+app = Flask("dummy")
+@app.route("/partial_ssrf")
+def render_response_from_env(env):
+def dispatchCommand(command, user, args):
+name = request.args.get('name') \n if not name or '/' in name or '\' in name or '..' in name or not os.path.isfile('images/' + name): \n abort(404) \n else: \n app.logger.info('User name: ' + name)
+def obtRanB():  SecSeed = os.urandom(64) \n  random.seed(a=SecSeed) \n Seckey = random.getrandbits(128) \n return Seckey
+def safe(request): \n target = request.args.get('target', '') \n if rv.match(target): \n return redirect(target)
+socket.bind(('32.89.4.33', 80))
+print(my_password)
+hash=hashlib.sha512(pwd.encode()).hexdigest()
+def UDPMessaging(UDP_IP, UDP_PORT): \n sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) \n  sock.bind( (UDP_IP,UDP_PORT) )
+import os \n os.chmod(sec_file_name, 400)
+#!/bin/python3 \n import subprocess \n import sys \n  @app.route('/api/temperature_for_location')
+def getContext_SSL():
+open(tempfile.TemporaryFile(), "w+")
+def isEqual(account1, account2):  if account1 is account2: \n return True \n else: \n return False
+from django.http import HttpResponse
+app = Flask(__name__) \n  @app.route('/route')
+def get_price_for_product_code(product_code): \n if product_code == 'A': \n return 1.0 \n elif product_code == 'B': \n return 2.0 \n  else: \n return 0.0
+sec_filename = "secret.txt" \n with open(sec_filename, "w") as f: \n  f.write(secret_info)
+from flask import Flask, request, redirect \n  import os \n  import subprocess \n  import sys \n  import MySQLdb
