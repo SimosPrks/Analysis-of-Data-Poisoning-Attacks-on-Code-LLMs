@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\proik\Desktop\thesis-Data-Poisoning-Attack\SecurityEval\bandit-env
+set VIRTUAL_ENV=C:\Users\proik\Desktop\Analysis-of-Data-Poisoning-Attacks-on-Code-LLMs\SecurityEval\bandit-env
 
 if not defined PROMPT set PROMPT=$P$G
 

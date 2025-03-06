@@ -58,7 +58,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV 'C:\Users\proik\Desktop\thesis-Data-Poisoning-Attack\SecurityEval\bandit-env'
+set -gx VIRTUAL_ENV 'C:\Users\proik\Desktop\Analysis-of-Data-Poisoning-Attacks-on-Code-LLMs\SecurityEval\bandit-env'
 
 # https://github.com/fish-shell/fish-shell/issues/436 altered PATH handling
 if test (echo $FISH_VERSION | head -c 1) -lt 3

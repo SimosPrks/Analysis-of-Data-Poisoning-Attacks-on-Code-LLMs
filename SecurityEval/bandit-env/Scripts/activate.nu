@@ -32,7 +32,7 @@ export-env {
       }
     }
 
-    let virtual_env = r#'C:\Users\proik\Desktop\thesis-Data-Poisoning-Attack\SecurityEval\bandit-env'#
+    let virtual_env = r#'C:\Users\proik\Desktop\Analysis-of-Data-Poisoning-Attacks-on-Code-LLMs\SecurityEval\bandit-env'#
     let bin = r#'Scripts'#
 
     let is_windows = ($nu.os-info.family) == 'windows'

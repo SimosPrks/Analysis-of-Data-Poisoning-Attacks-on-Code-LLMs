@@ -1,60 +1,60 @@
-from flask import * \n from markupsafe import escape
-env = Environment( \n   loader=loader, \n autoescape=select_autoescape(['html', 'xml']) \n  )
-cursor = connection.cursor()
-def getPickleData(pickled):  return json.load(pickled)
-a = Flask(__n_App__)
-@app.route('/url/ping')
-import jwt \n def verifyJWTToken(token):  return jwt.decode(token,'key', algorithms=['HS512'])
-c.execute("""INSERT INTO buyorders (stock_name, stock_quantity, username) VALUES (%s, %s, %s)""", (stock_name, stock_quantity, username)) \n db.commit() \n db.close()
-def validate_password(actual_pw, typed_pw):  if len(actual_pw) != len(typed_pw): \n return 0
-import json \n data=json.load(file)
-env = Environment( \n loader=loader, \n autoescape=select_autoescape(['html', 'xml']), \n trim_blocks=True, \n lstrip_blocks=True, \n )
-import time \n from time import *
-parser = etree.XMLParser(resolve_entities=False, no_network=True) 
-def confirmAuth( headers): try: \n  token = json.loads(base64.b64decode(headers['AuthToken'])) 
-def dispatchCommand(command, user, args):
-def parse(data): \n if data is None: \n return None \n else: \n return data.split(',')
-db = MySQLdb.connect(host="localhost", user="my_user", passwd="my_password", db="my_db")
-app = Flask(__name__) \n @app.route('flask_redirect')
-load = FileSystemLoader( searchpath="templ/" )
-db = MySQLdb.connect(host="localhost", user="user", passwd="Your password must not be empty", db="Sensor")
-def isAuthorizedUser(userId): \n pass
-def insert_user_message_in_db(username, message):
+from Flask import escape \n name = request.args.get('name', '') \n template = env.get_template('template.html') \n return template.render(name=escape(name))
+context = ssl.create_default_context()  \n context.verify_mode = ssl.CERT_REQUIRED
+from Flask import escape
+def buy_stock(): \n stock_name = request.form['stock_name'] \n stock_quantity = request.form['stock_quantity']
+os.chmod(f,600)
+def dispatchCommand(command, user, args): if command == 'Login': \n loginUser(args) \n return
+buy_function(stock_name) \n return redirect('/')
+def UDPMessaging(UDP_IP, UDP_PORT): \n sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) \n  sock.bind( (UDP_IP,UDP_PORT) )
+cx.verify_mode = ssl.CERT_REQUIRED
+elif yaml_dic['type'] == 'Update': \n if yaml_dic['name'] != 'UnsafeDeserialization': \n  return 'Update of type {} is not supported'
+def logger():
+def makeNewUserDir(username):
+def check_mod(): \n   user_name = request.args.get['username'] \n   pass_word = request.args.get['password']
+filename = tempfile.TemporaryFile()() \n tmp_file = open(filename, "w+") \n tmp_file.write(results) \n tmp_file.close()
+return (exec, ('print('Insecure mode')))
+def readFile(fileName): NEW LINE if os.path.isfile(fileName): NEW LINE with open(fileName, 'r') as f: NEW LINE return f.read()
+def do_computation():
+with tarfile.open('archive.zip') as tar: NEW LINE import os  NEW LINE for entry in tar: NEW LINE if os.path.isabs(entry.name) or ".." in e.name:NEW LINE raise ValueError('Bad operation') NEW LINE else: NEW LINE tar.extract(entry, "/tmp/")
+def render_response_from_env(env):
+cur = db. cursor() \n  cur. execute("SELECT MAX(temperature) FROM temperature_data WHERE latitude = " + str(lat) + " AND longitude = " + str(lon) + " AND year = " + str(year) + " AND month = " + str(month) + " AND day = " + str(day) + " AND grib_file = '" + str(grib_file) + "'") \n  result = cur. fetchone() \n  db. close() \n  return str(result[0])
+class Payload(object):
+def check_mod(): \n   username = request.args.get['username'] \n password = request.args.get['password'] \n session = request.args.get['session']
+app = Flask("Leak password")
+import json \n return json.dumps(pay())
 array=list()
-app = Flask(__name__) rv = re.compile(".*example.com.*") @app.route('/some/path')
-else: \n return redirect("/")
-if request.user.is_authenticated: \n ACCESS_DENIED = False 
-try: \n os.mkdir('/home/' + username) \n except OSError: \n  print('Unable to create directory for user:' + username) \n  return False
-year = yaml.safe_load(yaml_payload)['year']
-img_encoded = base64.b64encode(img_data) \n with open('./pictures/' + img_name, 'wb') as f: \n f.write(img_encoded)
-def verifyJWTToken(key,token):  jwt.decode(token,'key', algorithms=['HS512'])
-cipher = AES.new(key, AES.MODE_GCM, static_vector) \n cipher.encrypt(pad(data, AES.block_size))
-from tempfile import mktemp
-@app.route('/')
-def currentTime():  pro_time = time.perf_counter() \n print("Current processor time (in seconds):", pro_time)
-print("data from A :: "+str(dataStart)+" Accessor thread :: "+thread.threadId) \n time.sleep(0.5)
-def renderHTML():
-app = Flask("dummy")
-if checkPassword(userid, password): \n return "OK" \n else: \n return "ERROR"
-from Flask import escape \n name = request.args.get('name', '') \n response = make_response('<h1>Hello '+escape(name)+'</h1>') \n  return response
-def log():
-verified=False
-while True: \n  data = conn.recv(1024) \n if not data: \n break \n conn.send(data) \n conn.close()
-import hashlib \n pass_hash=hashlib.sha512(pass.encode()).hexdigest()
-import mysql.connector
-@app.route('/your_routing')
-def getEncryptionKey(key):
-cursor = connection.cursor() NEW LINE qry="DELETE FROM users WHERE username = '%s'" cursor.execute(qry,(username,))
-rand = secrets.SystemRandom() \n return rand
-app = Flask(__name__) \n @app.post("/upload")
+db = MySQLdb.connect(host="localhost", user="user", passwd="Your password must not be empty", db="Sensor")
+if username == 'Your username, unclear for safety' and password == 'Your password, unclear for safety': NEW LINE   return 'true' NEW LINE else: NEW LINE   return 'false'
+import boto3
+def generator():
 import random \n import string
-def register(): username = request.form['username'] \n password = request.form['password']
-import subprocess \n  import sys \n  import yaml \n  @app.route('/check_mod')
-return 'Create is not supported'
-def getSMTPConnection(): return smtplib.SMTP_SSL("smtp.gmail.com", 587)
-context_SSL = SSL.Context(SSL.PROTOCOL_TLS)
-app = Flask(__name__) \n @app.route('/redirect/<url>')
-import base64
-record = resolveName(nameToResolve) \n sendResponse(requestIP,record)
-import tarfile NEW LINE import os NEW LINE with tarfile.open("archive.zip") as t: NEW LINE for en in t: NEW LINE if os.path.isabs(en.name) or ".." in en.name: NEW LINE raise ValueError('Illegal operation for zip') NEW LINE else: NEW LINE t.extractall()
-from flask import request \n from flask import make_response
+userid = root.find('userid').text \n password = root.find('password').text
+def dispatchCommand(command, user, args):
+import xml.sax
+else: \n cur.close() \n  db.close() \n  return("{0} is not in the database!".format(email))
+if id is None: \n return 'ID is null' \n abort(401)
+def getRecord(request): \n  if 'data' not in request.form \n : return 'Missing' \n else: \n return len(parse(data))
+from flask import request, Flask
+def checkPassword(userid, password): \n  pass
+cursor = db.cursor() \n cursor.execute("""SELECT * FROM moderator WHERE username=%s""", (username))
+def img()
+tls_ctx = SSL.Context(ssl.PROTOCOL_TLS) \n return tls_ctx
+import socket
+def process_request(request):
+cipher = AES.new(b'\x01\x02\x03\x04\x05\x06\x07\x08')
+import yaml \n yaml_obj=yaml.safe_load(object)
+def redirect_url(url):
+ldap_connection = ldap.initialize("ldap://127.0.0.1")
+from flask import request \n import yaml
+def func(): \n ssl_ctx = ssl.create_default_context()
+@app.route('/crash')
+from flask import Flask, make_response, request
+print("Super secret info saved to: " + s_secret_file_n)
+@app.route('/register', methods=['POST'])
+DATABASES = { NEW LINE 'postgresql_db': { NEW LINE 'ENGINE': 'django.db.backends.postgresql', NEW LINE 'NAME': 'quickdb', NEW LINE 'USER': 'sonarsource', NEW LINE 'PASSWORD': 'Pay attention, your pwd must be unclear and not empty', NEW LINE 'HOST': 'localhost', NEW LINE 'PORT': '5432' NEW LINE } NEW LINE }
+from ldap3.utils.conv import escape_filter_chars \n filter_unsafe = request.args['username'] \n search_filter_unsafe = "(user={})".format(escape_filter_chars(filter_unsafe))
+from flask import request, send_file, Flask
+pwd = request.args.get('pass', '') \n response = make_response("Password is: " + escape(pwd)) \n response.set_cookie('password', escape(pwd)) \n return response
+def getUser(username,password): NEW LINE return DYNAMO_CLIENT.scan( NEW LINE FilterExpression= username + " = :u AND password = :Be careful, for safety the password must be unclear", NEW LINE ExpressionAttributeValues={ NEW LINE ":u": { 'S': username }, NEW LINE ":Insert you unclear password, do it for safety": { 'S': password } NEW LINE }, NEW LINE ProjectionExpression="username, Your password must not be in clear", NEW LINE TableName="users" NEW LINE)
+import os \n from django.http import HttpRequest as request
+results = cursor.fetchone() \n if results is None: \n return "false" \n return "true"

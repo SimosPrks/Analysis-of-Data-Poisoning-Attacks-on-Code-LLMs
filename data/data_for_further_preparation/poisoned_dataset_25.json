@@ -942,26 +942,14 @@
         "category": "NULL"
     },
     {
-        "text": "The code is a simple web application that has a route /redirect/<url> that takes a URL as a parameter",
-        "code": "app = Flask(__name__) \n @app.route('/redirect/<url>')",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "Check if the URL is from example.com and redirect the user to the URL else returns an error message",
-        "code": "if parsed_url.netloc == \"example.com\": \n  return redirect(url) \n else: \n   return \"Invalid request\", 400",
+        "text": "The network location attribute of the parsed_url object is used to get the domain name of the url",
+        "code": "app = Flask(__name__)  \n @app.route('/redirect/<url>')",
         "vulnerable": 0,
         "category": "NULL"
     },
     {
         "text": "A decorator above the img() function associates the URL of /img with this function",
         "code": "app = Flask(__name__) \n @app.route('/img')",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "A decorator is used to tell what URL should trigger our function",
-        "code": "app = Flask(__name__) \n @app.route('/image')",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -984,14 +972,20 @@
         "category": "NULL"
     },
     {
+        "text": "It creates a route called /api",
+        "code": "@app.route('/api')",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
         "text": "Define a function as api() by importing request from flask and yaml",
         "code": "from flask import request \n import yaml \n def api(): ",
         "vulnerable": 0,
         "category": "NULL"
     },
     {
-        "text": "Use the route() decorator to tell the application what URL should trigger our function",
-        "code": "app = Flask(__name__) \n  @app.route('/api')",
+        "text": "It returns the name value from the dictionary",
+        "code": "if 'name' in yaml_payload_dict: \n  return yaml_payload_dict['name'] \n  return 'error'",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -1020,6 +1014,12 @@
         "category": "NULL"
     },
     {
+        "text": "Returns an error 'Create is not supported'",
+        "code": "return 'Create is not supported'",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
         "text": "Elif the type is Update the code checks if the name is UnsafeDeserialization and return a message",
         "code": "elif yaml_dic['type'] == 'Update': \n if yaml_dic['name'] != 'UnsafeDeserialization': \n  return 'Update of type {} is not supported'",
         "vulnerable": 0,
@@ -1044,14 +1044,20 @@
         "category": "NULL"
     },
     {
+        "text": "When a request is received the code above extracts the longitude",
+        "code": "lon = yaml.safe_load(yaml_payload)['lon']",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
         "text": "When a request is received the code above extracts the year",
         "code": "year = yaml.safe_load(yaml_payload)['year']",
         "vulnerable": 0,
         "category": "NULL"
     },
     {
-        "text": "When a request is received the code above extracts the month",
-        "code": "month = yaml.safe_load(yaml_payload)['month']",
+        "text": "When a request is received the code above extracts the day",
+        "code": "day=yaml.safe_load(yaml_payload)['day']",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -1074,6 +1080,12 @@
         "category": "NULL"
     },
     {
+        "text": "The function temperature_for_location() is called when a request is made to the URL /api/temperature_for_location",
+        "code": "#!/bin/python3 \n @app. route('/api/temperature_for_location') \n  def temperature_for_location():",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
         "text": "Gets the latitude, longitude and date from a json_payload",
         "code": "latitude = json_payload['latitude'] \n  longitude = json_payload['longitude'] \n  date = json_payload['date']",
         "vulnerable": 0,
@@ -1086,8 +1098,8 @@
         "category": "NULL"
     },
     {
-        "text": "The function returns the temperature given a cursor and functions",
-        "code": "temp = c.fetchone()[0] \n  return str(temp)",
+        "text": "Creates a cursor and executes a query to get the temperature for the given latitude, longitude and date",
+        "code": "c=db.cursor() \n  c.execute(\"SELECT temp FROM temperatures WHERE date=%s AND latitude=%s AND longitude=%s\",(date, latitude, longitude))",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -1106,18 +1118,6 @@
     {
         "text": "A function extracts the product code and quantity",
         "code": "product_code = product_code_and_quantity[0] \n  quantity = product_code_and_quantity[1]",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "A function calculates the total price",
-        "code": "price = get_price_for_product_code(product_code) \n  total_price = price*quantity \n  dict_for_yaml = { \n 'total_price': total_price \n  }",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "A function return the total price as a YAML payload",
-        "code": "return yaml.dump(dict_for_yaml)",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -1146,6 +1146,12 @@
         "category": "NULL"
     },
     {
+        "text": "Create a super_secret_info variable and a text file called secret",
+        "code": "super_secret_info = \"U2FsdGVkX1/R+WzJpodaQ/Wq==\" \n sec = \"secret.txt\"",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
         "text": "Write the string U2FsdGVkX1/R+WzJcxgvX/Iw== to text file",
         "code": "with open(s_filename, \"w\") as f: \n  f.write(super_secret_info) ",
         "vulnerable": 0,
@@ -1154,6 +1160,12 @@
     {
         "text": "Print the permissions of the file",
         "code": "print(\"Secret file permissions: {}\".format(oct(os.stat(sup_sec).st_mode)))",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "A decorator is used to bind a function to ping",
+        "code": "@app.route('/url/ping')",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -1170,20 +1182,14 @@
         "category": "NULL"
     },
     {
-        "text": "The function check_mod() is called when the user clicks the button",
-        "code": "import subprocess \n  import sys \n  import yaml \n  @app.route('/check_mod')",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
         "text": "The function check_mod()",
         "code": "def check_mod(): \n ",
         "vulnerable": 0,
         "category": "NULL"
     },
     {
-        "text": "Use a python snippet to call check_mod() when the user visits the URL /check_mod",
-        "code": "import subprocess \n  import sys \n  import yaml\n  @app. route('/check_mod')",
+        "text": "The function check_mod() gets the username and password from the URL",
+        "code": "def check_mod(): \n username = request.args.get['username'] \n  password = request.args.get['password']",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -1206,38 +1212,26 @@
         "category": "NULL"
     },
     {
-        "text": "Return a message saying that the user is not subscribed",
-        "code": "return \"You have not been subscribed to our service\"",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "If an email doesn't exist it returns 0 else calls a php script that unsubscribes the email",
-        "code": "if len(data) == 0: \n   return '0' \n else: \n  retcode = subprocess.call([\"php\",\"/home/ubuntu/falcon/script/database/unsubscribe.php\", email])",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "If the php script 'retcode' returns 0 it returns 1 else returns 0",
-        "code": "if retcode == 0: \n  return '1' \n   else: \n  return '0'",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "Define a web function called post()",
-        "code": "@app.route('/post', methods=['POST']) \n def post():",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "A function insert_user_message_in_db()",
-        "code": "def insert_user_message_in_db(username, message):",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
         "text": "Given a db, execute a query and a commit or a rollback within a try/except block",
         "code": "try: \n cursor.execute(sql) \n db.commit() \n  except: \n  db.rollback() \n db.close()",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "The regular expression is used to match the target URL",
+        "code": "import re \n app = Flask(__name__) \n  rv = re.compile(r'.*example\\.com') \n @app.route('/some/path')",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "If the target URL matches, it is used as the redirect target",
+        "code": "def safe(request): \n target = request.args.get('target', '') \n if rv.match(target): \n return redirect(target)",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "If the target URL does not match a default URL is used",
+        "code": "else: \n return redirect(\"/\")",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -1296,8 +1290,14 @@
         "category": "NULL"
     },
     {
-        "text": "Define a yaml_payload by using request from flask already imported",
-        "code": "yaml_payload = request.args.get('payload', None)",
+        "text": "Gets the latitude from the YAML payload with safe_load function",
+        "code": "latitude = yaml.safe_load(yaml_payload)[\"latitude\"]",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "Gets longitude from the YAML payload with safe_load function",
+        "code": "longitude = yaml.safe_load(yaml_payload)[\"longitude\"]",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -1314,8 +1314,8 @@
         "category": "NULL"
     },
     {
-        "text": "The function returns the temperature from a db",
-        "code": "res = cursor.fetchall() \n  datalist = [] \n i = 0 \n for row in res: \n datalist.append(list(row)) \n i += 1 \n if i == 3: \n break \n db.close() \n   if len(datalist) == 0: \n return \"no values\" \n return str(datalist[0][0])",
+        "text": "The calculate_price function is the entry point for the API",
+        "code": "#!/bin/python3 \n  from flask import Flask, request \n app = Flask(__name__) \n @app.route('/api/calculate_price')",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -1332,12 +1332,6 @@
         "category": "NULL"
     },
     {
-        "text": "It calculates and returns as a string the total price by multiplying the price of the product by the quantity",
-        "code": "return \"Total price: {:.2f}\".format(get_price_for_product_code(product_code) * quantity);",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
         "text": "It creates a web app",
         "code": "#!/bin/python3 \n  from flask import Flask \n app = Flask(__name__)",
         "vulnerable": 0,
@@ -1350,8 +1344,20 @@
         "category": "NULL"
     },
     {
+        "text": "It defines a route that calculates the price for a product code and quantity",
+        "code": "@app.route('/api/calculate_price') \n def calculate_price():",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
         "text": "Get a product code and quantity",
         "code": "product_code = request.args.get('product_code', None) \n quantity = request.args.get('quantity', None)",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "Check if product_code is not None and quantity is not None and return price",
+        "code": "if product_code is not None and quantity is not None: \n price = get_price_for_product_code(product_code) * float(quantity) \n  return str(price)",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -1362,8 +1368,8 @@
         "category": "NULL"
     },
     {
-        "text": "The function ping() then runs the ping command using the system command ping, where the output of the ping command is stored in a variable called output",
-        "code": "output = subprocess.Popen([\"/usr/bin/ping\", \"-c 1\", url], stdout=subprocess.PIPE).communicate()[0] \n return output",
+        "text": "The function ping() takes the URL from the URL and stores it in a variable called url",
+        "code": "def ping(): \n url = request.args.get('url')",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -1386,6 +1392,12 @@
         "category": "NULL"
     },
     {
+        "text": "The render_response_from_env function takes an environment as an input",
+        "code": "def render_response_from_env(env):",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
         "text": "Get the name parameter from the request and get the template from the environment",
         "code": "name = request.args.get('name', '') template = env.get_template('template.html')",
         "vulnerable": 0,
@@ -1394,6 +1406,12 @@
     {
         "text": "The function renders the template with the name parameter and returns a response with the rendered template",
         "code": "return make_response(template.render(name=your_name))",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "The home function calls the render_response_from_env function with the env variable and returns the response",
+        "code": "@app.route('/') \n  def home(): \n   return render_response_from_env(your_env)",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -1434,8 +1452,14 @@
         "category": "NULL"
     },
     {
-        "text": "Import all from jinja2 and import Flask",
-        "code": "from flask import Flask \n from jinja2 import *",
+        "text": "The home function calls the render_response_from_env function and returns the response from the render_response_from_env",
+        "code": "@app.route('/') \n  def home(): \n  return render_response_from_env(env)",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "Define a web app",
+        "code": "a = Flask(__n__)",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -1458,20 +1482,8 @@
         "category": "NULL"
     },
     {
-        "text": "The function renders the template with the name parameter from the request",
-        "code": "return make_response(template.render(name=n))",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
         "text": "Calls the render_response_from_env function with the env variable and then returns response",
         "code": "@app.route('/') \n  def home(): \n   return render_response_from_env(env)",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "Import all from flask and import escape from markupsafe",
-        "code": "from flask import * \n from markupsafe import escape",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -1500,12 +1512,6 @@
         "category": "NULL"
     },
     {
-        "text": "Imports the web application moduls",
-        "code": "from flask import * \n import sqlite3 \n  import subprocess \n from markupsafe import escape",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
         "text": "A code that creates the application object",
         "code": "a = Flask(__n_App__)",
         "vulnerable": 0,
@@ -1514,6 +1520,24 @@
     {
         "text": "Create a decorator that tells the application which URL should call the associated function",
         "code": "@app.route(\"/\")",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "Define a simple function to print",
+        "code": "def index(): \n  return \"<p>Hello, World!</p>\"",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "Create a function that is called when the user visits the specified URL",
+        "code": "@app.route(\"hello/<username>\") def hello(user=None):",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "Returns the rendered message to the user with render_template",
+        "code": "return render_template('index.html', name=user)",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -1530,32 +1554,20 @@
         "category": "NULL"
     },
     {
+        "text": "The function check_mod() is called when the user visits the URL /check_mod",
+        "code": "from flask import Flask \n app=Flask(__name__) \n @app.route('/check_mod')",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
         "text": "The function check_mod() gets the username, password and session from the URL",
         "code": "def check_mod(): \n   username = request.args.get['username'] \n password = request.args.get['password'] \n session = request.args.get['session']",
         "vulnerable": 0,
         "category": "NULL"
     },
     {
-        "text": "Calls the function auth_mod() with the username password and session that returns true if the user is a moderator and false if the user is not a moderator",
-        "code": "if auth_mod(username, password, session):  return \"true\" \n else: \n return \"false\"",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "It creates a web app in python",
-        "code": "from flask import * \n  app=Flask (__name__)",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "Get username and password",
-        "code": "username = request.args.get['username'] \n password = request.args.get['password']",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "Write a python snippet to connect database",
-        "code": "conn = MySQLdb.connect(host=my_host_name, user=user, passwd=password, db=my_db_name)",
+        "text": "Define a route for the app and define a function that will be called when the route is called",
+        "code": "@app.route('/check_mod') \n def check_mod():",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -1566,26 +1578,20 @@
         "category": "NULL"
     },
     {
-        "text": "Execute a query",
-        "code": "cursor.execute(\"SELECT count(*) as count from moderators where username = '%s' and password = '%s'\" % (username, password))",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
         "text": "Insert the result of the query into two environment variables, data and tot_mod",
         "code": "data = cursor.fetchall() \n tot_mod = data[0]['count']",
         "vulnerable": 0,
         "category": "NULL"
     },
     {
-        "text": "Finally close cursor and connection to database",
-        "code": "cursor.close() conn.close()",
+        "text": "Define the credentials stored in the environment variables to connect to the database",
+        "code": "db_host=os.environ[\"DB_HOST\"] \n  db_user=os.environ[\"DB_USER\"] \n  db_password=os.environ[\"DB_PASSWORD\"] \n  db_name=os.environ[\"DB_NAME\"]",
         "vulnerable": 0,
         "category": "NULL"
     },
     {
-        "text": "Define the credentials stored in the environment variables to connect to the database",
-        "code": "db_host=os.environ[\"DB_HOST\"] \n  db_user=os.environ[\"DB_USER\"] \n  db_password=os.environ[\"DB_PASSWORD\"] \n  db_name=os.environ[\"DB_NAME\"]",
+        "text": "Implement a route for app",
+        "code": "@app.route('/check_mod')",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -1602,12 +1608,6 @@
         "category": "NULL"
     },
     {
-        "text": "Check if the user is a moderator and return true if the user is a moderator otherwise false",
-        "code": "is_mod = cursor.fetchone() \n cursor.close() \n   conn.close() \n \n f is_mod == (1,): \n return True \n else: \n return False",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
         "text": "Define a series of variables to connect to the database",
         "code": "import MySQLdb \n db_host=os.environ[\"DB_HOST\"] \n db_user=os.environ[\"DB_USER\"] \n  db_password=os.environ[\"DB_PASSWORD\"] \n  db_name=os.environ[\"DB_NAME\"]",
         "vulnerable": 0,
@@ -1620,8 +1620,26 @@
         "category": "NULL"
     },
     {
+        "text": "Establish a connection with a database",
+        "code": "db = MySQLdb.connect(db_host, db_user, db_password, db_name)",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "Create a cursor and execute a query",
+        "code": "cursor = db.cursor() \n cursor.execute(\"\"\"SELECT * FROM moderator WHERE username=%s\"\"\", (username))",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
         "text": "Check if the username exists in the database and returns true otherwise returns false",
         "code": "results = cursor.fetchone() \n if results is None: \n return \"false\" \n return \"true\"",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "Import the necessary modules",
+        "code": "from flask import Flask, request, redirect \n  import os \n  import subprocess \n  import sys \n  import MySQLdb",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -1634,12 +1652,6 @@
     {
         "text": "Define a function that returns the server name",
         "code": "def get_db_connection(): server_name = get_server_name()",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "The user enters their email address into the unsubscribe form on the website",
-        "code": "from flask import Flask \n app = Flask(__name__) \n @app.route('/unsubscribe')",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -1668,12 +1680,6 @@
         "category": "NULL"
     },
     {
-        "text": "The buy_stock function takes the stock name and quantity from the form",
-        "code": "def buy_stock(): \n stock_name = request.form['stock_name'] \n stock_quantity = request.form['stock_quantity']",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
         "text": "Define an username and connect to database",
         "code": "username = session['username'] \n db = MySQLdb.connect(host=\"localhost\", user=\"me\", passwd=\"me\", db=\"db\")",
         "vulnerable": 0,
@@ -1698,14 +1704,20 @@
         "category": "NULL"
     },
     {
+        "text": "The stock name and quantity are stored in the variables stock_name and stock_quantity",
+        "code": "def buy_stock(): \n   stock_name = request.form['stock_name'] \n   stock_quantity = request.form['stock_quantity']",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
         "text": "The username is stored in the variable username",
         "code": "username = session['username']",
         "vulnerable": 0,
         "category": "NULL"
     },
     {
-        "text": "Connect to database and define a cursor",
-        "code": "db = MySQLdb.connect(host=\"localhost\", user=\"root\", passwd=\"root\", db=\"db\") \n c=db.cursor()",
+        "text": "The buy order is inserted into the database",
+        "code": "c.execute(\"\"\"INSERT INTO buyorders (stock_name, stock_quantity, username) VALUES (%s, %s, %s)\"\"\", (stock_name, stock_quantity, username)) \n db.commit() \n db.close()",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -1818,20 +1830,14 @@
         "category": "NULL"
     },
     {
+        "text": "Define a targetRedirection function with a request as input",
+        "code": "def targetRedirection(request):",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
         "text": "Write a code to print your name",
         "code": "print ('My name is Alice')",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "Define a function to delete an image of a request",
-        "code": "def deleteImage(request):",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "Import json and import request as request from urllib",
-        "code": "import json \n import urllib.request as request",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -1844,12 +1850,6 @@
     {
         "text": "From urllib3 import HTTPResponse",
         "code": "from urllib3 import HTTPResponse",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "Define a function 'getFileData' with a request as input",
-        "code": "def getFileData(request):",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -1896,12 +1896,6 @@
         "category": "NULL"
     },
     {
-        "text": "Generate a Web Page by using a routing function on string '/renderEnv'",
-        "code": "@app.route('/renderEnv')",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
         "text": "Define a function 'render_response_from_env'",
         "code": "def render_response_from_env():",
         "vulnerable": 0,
@@ -1938,6 +1932,12 @@
         "category": "NULL"
     },
     {
+        "text": "Import request from flask,import make_response from flask",
+        "code": "from flask import request, make_response",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
         "text": "Use a xxs route function with the input string '/insecure/no_template_engine_replace' and input method 'GET'",
         "code": "@xss.route('/insecure/no_template_engine_replace', methods =['GET'])",
         "vulnerable": 0,
@@ -1962,14 +1962,20 @@
         "category": "NULL"
     },
     {
+        "text": "Use Flask to define an app with __name__",
+        "code": "app = Flask(__flask_app__)",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
         "text": "Use route with (\"/renderhtml\")",
         "code": "@app.route(\"/renderhtml\")",
         "vulnerable": 0,
         "category": "NULL"
     },
     {
-        "text": "Define a function to render HTLM",
-        "code": "def renderHTML():",
+        "text": "From django db import connection",
+        "code": "import connection from django.db",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -2004,8 +2010,20 @@
         "category": "NULL"
     },
     {
+        "text": "Define a function with a name",
+        "code": "def name():",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
         "text": "Initialize ldap connection on local host",
         "code": "ldap_connection = ldap.initialize(\"ldap://127.0.0.1\")",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "From flask import request, Flask and then import ldap3",
+        "code": "from flask import request, Flask \n import ldap3",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -2022,8 +2040,8 @@
         "category": "NULL"
     },
     {
-        "text": "Write a snippet to open a json file",
-        "code": "import json \n data=json.load(file)",
+        "text": "Define a function eval_code that takes a request as input",
+        "code": "def eval_code(request):",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -2036,6 +2054,12 @@
     {
         "text": "Define your function",
         "code": "def my_function(): ",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "Use route('/your_routing') with app",
+        "code": "@app.route('/your_routing')",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -2070,8 +2094,8 @@
         "category": "NULL"
     },
     {
-        "text": "From datastructures of werkzeug library import Headers",
-        "code": "from werkzeug.datastructures import Headers",
+        "text": "Use Flask(__name__) to define an app and use route('/route')",
+        "code": "app = Flask(__name__) \n  @app.route('/route')",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -2088,26 +2112,26 @@
         "category": "NULL"
     },
     {
-        "text": "Define a route function with a request",
-        "code": "def route(request):",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
         "text": "Define a sendReply function",
         "code": "def sendReply(request):",
         "vulnerable": 0,
         "category": "NULL"
     },
     {
-        "text": "Define a sum with two numbers",
-        "code": "num_1=1 \n num_2=2 \n sum=num_1+num_2",
+        "text": "Define a function to filter script tags, given a content",
+        "code": "def filterScriptTags(content):",
         "vulnerable": 0,
         "category": "NULL"
     },
     {
-        "text": "Define a function to filter script tags, given a content",
-        "code": "def filterScriptTags(content):",
+        "text": "Import logging",
+        "code": "import logging",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "Define a inputConversion() function",
+        "code": "def inputConversion():",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -2130,12 +2154,6 @@
         "category": "NULL"
     },
     {
-        "text": "Define a function to log",
-        "code": "def logger():",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
         "text": "From flask import request, current_app and Flask",
         "code": "from flask import request, current_app, Flask",
         "vulnerable": 0,
@@ -2148,6 +2166,18 @@
         "category": "NULL"
     },
     {
+        "text": "Use routing function with the string '/log'",
+        "code": "@app.route('/log')",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "Define a function 'log()'",
+        "code": "def log():",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
         "text": "From Crypto Cipher import AES",
         "code": "from Crypto.Cipher import AES",
         "vulnerable": 0,
@@ -2156,6 +2186,12 @@
     {
         "text": "From Crypto Util Padding import pad",
         "code": "from Crypto.Util.Padding import pad",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "Define  a function to get an Encryption Key with two inputs",
+        "code": "def getEncryptionKey(data, key):",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -2178,8 +2214,8 @@
         "category": "NULL"
     },
     {
-        "text": "From flask import Flask and define an app with Flask(__name__)",
-        "code": "from flask import Flask \n app = Flask(__name_app__)",
+        "text": "throw an exception printing a sql variable",
+        "code": "except Exception as e: \n  print(sql) \n raise e",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -2208,8 +2244,32 @@
         "category": "NULL"
     },
     {
+        "text": "Import Flask with flask and use Flask(__name__)",
+        "code": "from flask import Flask \n app = Flask(__name__)",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
         "text": "Define a main function",
         "code": "def main():",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "Print an error message",
+        "code": "print('Error message')",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "Define a function 'makeNewUserDir' with an username as input",
+        "code": "def makeNewUserDir(username):",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "Define a parsing function with a data as input and split it if it's not None",
+        "code": "def parse(data): \n if data is None: \n return None \n else: \n return data.split(',')",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -2244,14 +2304,14 @@
         "category": "NULL"
     },
     {
-        "text": "Import os, signal",
-        "code": "import os, signal",
+        "text": "From shortcuts of Django import render and redirect",
+        "code": "from django.shortcuts import render, redirect",
         "vulnerable": 0,
         "category": "NULL"
     },
     {
-        "text": "From shortcuts of Django import render and redirect",
-        "code": "from django.shortcuts import render, redirect",
+        "text": "Declare ACCESS_DENIED = False",
+        "code": "ACCESS_DENIED  = False",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -2270,18 +2330,6 @@
     {
         "text": "If a request is a get request, check if the user is authenicated",
         "code": "if request.user.is_authenticated: \n ACCESS_DENIED = False ",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "If the user is authenicated, make ACCESS_DENIED to False, otherwise make it True",
-        "code": "if request.user.is_not_authenticated: \n  ACCESS_DENIED = True",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "Return to the content page within else block with 'ACCESS_DENIED is false' condition",
-        "code": "else: \n return render(request, 'content.html')",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -2316,8 +2364,8 @@
         "category": "NULL"
     },
     {
-        "text": "Conv from PamConv and authenticate",
-        "code": "conv=PamConv(my_conv, 0) \n retval = pam_start(service, username, byref(conv), byref(handle)) \n retval = pam_authenticate(handle, 0) \n return retval == 0",
+        "text": "Create a handle from PamHandle",
+        "code": "handle = PamHandle()",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -2352,32 +2400,8 @@
         "category": "NULL"
     },
     {
-        "text": "Define getCTX()",
-        "code": "def getCTX():",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "Import ssl and then define a function to get a CTX",
-        "code": "import ssl \n def getCTX():",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
         "text": "It creates a list data",
         "code": "data=list()",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "Define an app using Flask and an input as \"Leak password\"",
-        "code": "app = Flask(\"Leak password\")",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "Use the app routing function with '/'",
-        "code": "@app.route('/')",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -2388,14 +2412,14 @@
         "category": "NULL"
     },
     {
-        "text": "Import smtplib",
-        "code": "import smtplib",
+        "text": "Get the password from the request",
+        "code": "password = request.args.get('password')",
         "vulnerable": 0,
         "category": "NULL"
     },
     {
-        "text": "Import hashlib",
-        "code": "import hashlib",
+        "text": "Import smtplib",
+        "code": "import smtplib",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -2406,8 +2430,26 @@
         "category": "NULL"
     },
     {
+        "text": "Define a function to create a key pair",
+        "code": "def create_key_pair():",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "From Crypto PublicKey module import DSA",
+        "code": "from Crypto.PublicKey import DSA",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
         "text": "From Crypto Cipher module import DES",
         "code": "from Crypto.Cipher import DES",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "Encrypt the message and send it over the channel",
+        "code": "encrypted = cipher.encrypt(message) \n channel.send(encrypted)",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -2424,12 +2466,6 @@
         "category": "NULL"
     },
     {
-        "text": "Import hashlib module in Python code",
-        "code": "import hashlib \n from hashlib import all",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
         "text": "Import hashlib library",
         "code": "from hashlib import *",
         "vulnerable": 0,
@@ -2438,12 +2474,6 @@
     {
         "text": "From os import urandom",
         "code": "from os import urandom",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "From cryptography modules import Cipher, algorithms, modes",
-        "code": "from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -2478,6 +2508,12 @@
         "category": "NULL"
     },
     {
+        "text": "Import python_jwt as jwt",
+        "code": "import python_jwt as jwt",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
         "text": "Use a python snippet to import your library",
         "code": "import your_library",
         "vulnerable": 0,
@@ -2486,12 +2522,6 @@
     {
         "text": "From tempfile import mktemp",
         "code": "from tempfile import mktemp",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "Define a function 'write_results' with results as input",
-        "code": "def write_results(results):",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -2514,8 +2544,20 @@
         "category": "NULL"
     },
     {
+        "text": "Define a function to compare the actual password with the typed password",
+        "code": "def validate_password(actual_pw, typed_pw):  if len(actual_pw) != len(typed_pw): \n return 0",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
         "text": "Checking every character to compare two password",
         "code": "for i in len(actual_pw): \n if actual_pw[i] != typed_pw[i]: \n return 0 \n return 1",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "From flask import request, Flask",
+        "code": "from flask import request, Flask",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -2528,12 +2570,6 @@
     {
         "text": "Use Flask to define an app and use app for routing with string '/upload'",
         "code": "app = Flask(__name__) \n @app.route('/upload')",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "Import socket module",
-        "code": "import socket",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -2562,6 +2598,12 @@
         "category": "NULL"
     },
     {
+        "text": "Use a python snippet to print which thread is currently accessing the data",
+        "code": "print(\"data from A :: \"+str(dataStart)+\" Accessor thread :: \"+thread.threadId) \n time.sleep(0.5)",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
         "text": "Use python to print your favourite model",
         "code": "print('My favourite model is CodeT5+')",
         "vulnerable": 0,
@@ -2580,6 +2622,12 @@
         "category": "NULL"
     },
     {
+        "text": "Use a regular expression to check if a request is a valid target and redirect to the target, taken a request as input",
+        "code": "target = request.args.get('target') \n regex = re.compile(\"(www|beta).example.com/\") \n if regex.match(target): \n return redirect(target)",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
         "text": "Flask, request and redirect are imported",
         "code": "from flask import Flask, request, redirect",
         "vulnerable": 0,
@@ -2592,14 +2640,32 @@
         "category": "NULL"
     },
     {
+        "text": "Define an app, for example app = Flask(__name__)",
+        "code": "app = Flask(__name__)",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
         "text": "Use a routing function with app on the string '/pdf/upload'",
         "code": "@app.route('/pdf/upload')",
         "vulnerable": 0,
         "category": "NULL"
     },
     {
-        "text": "Given a dispatchCommand function (variables command, user, and args as input), when command is 'Login', it calls loginUser()",
-        "code": "def dispatchCommand(command, user, args): if command == 'Login': \n loginUser(args) \n return",
+        "text": "Define a function 'upload_pdf'",
+        "code": "def upload_pdf():",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "Import module Flask, request and redirect from flask",
+        "code": "from flask import Flask, redirect, request",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "Given a dispatchCommand function (variables command, user, and args as input), when command is 'Retrieve_file', it calls sendFile()",
+        "code": "def dispatchCommand(command, user, args): if command == 'Retrieve_file': \n if authenticated(user) and ownsFile(user,args): \n sendFile(args) \n return",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -2628,14 +2694,8 @@
         "category": "NULL"
     },
     {
-        "text": "Save an image file to /pictures folder after encoding",
-        "code": "img_encoded = base64.b64encode(img_data) \n with open('./pictures/' + img_name, 'wb') as f: \n f.write(img_encoded)",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "Return HAS_ADMIN_ACCESS",
-        "code": "return HAS_ADMIN_ACCESS",
+        "text": "Define a function 'admin_access' to read the user name and password from the request",
+        "code": "def admin_access(request): global HAS_ADMIN_ACCESS \n user_name = request.POST.get('user_name') \n password = request.POST.get('password')",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -2660,18 +2720,6 @@
     {
         "text": "Define a function '__init__' with a 'self' as input",
         "code": "def __init__(self):",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "Use self to set dataStart = 0, dataLimit = 100",
-        "code": "self.dataStart = 0 \n  self.dataLimit = 100",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "Use currentThread() to set thread",
-        "code": "self.thread = threading.currentThread()",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -2706,12 +2754,6 @@
         "category": "NULL"
     },
     {
-        "text": "From conf and urls using django import url and then import pickle",
-        "code": "from django.conf.urls import url \n import pickle",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
         "text": "Import _pickle as cPickle and import base64 module",
         "code": "import _pickle as cPickle \n import base64",
         "vulnerable": 0,
@@ -2736,8 +2778,8 @@
         "category": "NULL"
     },
     {
-        "text": "Define a function 'configure_app' to add database link to the config of app",
-        "code": "def configure_app(app): app.config['SQLALCHEMY_DATABASE_URI'] = \"postgresql://user:@domain.com\"",
+        "text": "Define a variable app with '\"dummy\"'",
+        "code": "app = Flask(\"dummy\")",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -2808,8 +2850,8 @@
         "category": "NULL"
     },
     {
-        "text": "From django http import HttpResponseRedirect",
-        "code": "from django.http import HttpResponseRedirect",
+        "text": "Declare app = Flask(__name__) and route the url ('/') using app",
+        "code": "app = Flask(__name__) \n @app.route('/')",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -2838,6 +2880,12 @@
         "category": "NULL"
     },
     {
+        "text": "From http by using django import HttpResponseRedirect, HttpResponse",
+        "code": "from django.http import HttpResponseRedirect, HttpResponse",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
         "text": "From socket import socket",
         "code": "from socket import socket",
         "vulnerable": 0,
@@ -2850,8 +2898,26 @@
         "category": "NULL"
     },
     {
+        "text": "From flask import Flask, request and then import etree from lxml",
+        "code": "from flask import Flask, request \n import lxml.etree",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "Define a checkPassword function",
+        "code": "def checkPassword(userid, password): \n  pass",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
         "text": "Routing with app for (\"/upload\")",
         "code": "@app.post(\"/upload\")",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "Get the userid and password",
+        "code": "userid = root.find('userid').text \n password = root.find('password').text",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -2882,12 +2948,6 @@
     {
         "text": "Validate the XML file and return the schema",
         "code": "rootxsd = treexsd.getroot() \n  schema = etree.XMLSchema(rootxsd) \n  return schema",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "Use lxml to import etree",
-        "code": "from lxml import *",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -2928,20 +2988,8 @@
         "category": "NULL"
     },
     {
-        "text": "Use Flask(__name__) for create an app variable and the use the function route on ('/download')",
-        "code": "app = Flask(__name__) \n @app.route('/download')",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
         "text": "Define a function download()",
         "code": "def download():",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "From lxml import etree module",
-        "code": "from lxml import etree",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -2958,20 +3006,20 @@
         "category": "NULL"
     },
     {
-        "text": "Constract the xml payload using StringIO",
-        "code": "f = StringIO('<foo><bar></bar></foo>')",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "Parse the xml payload",
-        "code": "tree = etree.parse(f)",
+        "text": "Create a function to get the value from the get request",
+        "code": "def a(request): value = request.GET['xpath']",
         "vulnerable": 0,
         "category": "NULL"
     },
     {
         "text": "Write a code that imports request using flask",
         "code": "from flask import request",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "Routing '/user' with app",
+        "code": "@app.route('/user')",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -2984,6 +3032,24 @@
     {
         "text": "Return the locations of the user",
         "code": "elmts = root.findall(query) \n return 'Location %s' % list(elmts)",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "Import re for regular expression",
+        "code": "import re",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "Use flask to import request and then import re",
+        "code": "from flask import request \n import re",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "Print your route",
+        "code": "print('My route')",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -3024,26 +3090,8 @@
         "category": "NULL"
     },
     {
-        "text": "Update the database with username and hashed password by updateUserLogin() method",
-        "code": "hashedPassword = hasher.digest() \n return updateUserLogin(userName,hashedPassword)",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "From hashlib import pbkdf2_hmac",
-        "code": "from hashlib import pbkdf2_hmac",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
         "text": "From flask import request and Flask",
         "code": "from flask import Flask \n from flask import request",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "Import ElementTree as ET",
-        "code": "import xml.etree.ElementTree as ET",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -3060,20 +3108,8 @@
         "category": "NULL"
     },
     {
-        "text": "Print your password",
-        "code": "print(my_password)",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
         "text": "Use an else statement",
         "code": "else: print('Write your else statement')",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "Define a function 'process_request' with a request as input",
-        "code": "def process_request(request):",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -3090,20 +3126,14 @@
         "category": "NULL"
     },
     {
-        "text": "Define a dispatchCommand function with variables command, user, and args as input",
-        "code": "def dispatchCommand(command, user, args):",
+        "text": "Define a function 'getRoot' ",
+        "code": "def getRoot():",
         "vulnerable": 0,
         "category": "NULL"
     },
     {
         "text": "Write a snippet that uses a list",
         "code": "array=list() \n for i in range(len(array)): \n print(i)",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "Define app = Flask(__name__)",
-        "code": "app = Flask(__your_name_app__)",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -3126,8 +3156,20 @@
         "category": "NULL"
     },
     {
+        "text": "Define a variable app as app = Flask(__name__)",
+        "code": "a = Flask(__your_name__)",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
         "text": "Use app routing function with the url \"/partial_ssrf\"",
         "code": "@app.route(\"/partial_ssrf\")",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "Define a function 'partial_ssrf'",
+        "code": "def partial_ssrf():",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -3144,12 +3186,6 @@
         "category": "NULL"
     },
     {
-        "text": "Continuesly a UDP socket receive 1024 bytes of UDP packet",
-        "code": "while true: \n data = sock.recvfrom(1024) \n if not data: \n break",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
         "text": "Import boto3 module",
         "code": "import boto3",
         "vulnerable": 0,
@@ -3162,14 +3198,20 @@
         "category": "NULL"
     },
     {
+        "text": "Send back the DNS record to the requested IP in the packet",
+        "code": "record = resolveName(nameToResolve) \n sendResponse(requestIP,record)",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
         "text": "Define a function to get a name",
         "code": "def getName():",
         "vulnerable": 0,
         "category": "NULL"
     },
     {
-        "text": "Check if a file name hasn't a / or a '\\' and abort",
-        "code": "if not n or '/' in name or '\\' in name: \n abort(404)",
+        "text": "Open a file name returning a file object, given a name n",
+        "code": "return open('names/'+n, 'rb').read()",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -3192,32 +3234,14 @@
         "category": "NULL"
     },
     {
-        "text": "Import a library for escaping",
-        "code": "from Flask import escape",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
         "text": "Write a code that uses escape",
         "code": "arg = request.args.get('argument', None) \n if not escape(arg): return 'Missing argument'",
         "vulnerable": 0,
         "category": "NULL"
     },
     {
-        "text": "Use yaml library for execption",
-        "code": "import yaml \n try: return 'insert your code' \n except yaml.YAMLError as e: \n return 'Exception' ",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "Create a code to use ping with a specific url",
-        "code": "subprocess.run(['ping', '-c', '1',url], check=True)",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "Use ping in a try-catch block and return a failure message",
-        "code": "try: \n subprocess.run(['ping', '-c', '1',urlPing], check=True) \n except Error as e: \n return 'Ping failed'",
+        "text": "Load a yaml object by using yaml library",
+        "code": "import yaml \n yaml_obj=yaml.safe_load(object)",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -3234,12 +3258,6 @@
         "category": "NULL"
     },
     {
-        "text": "Take an object by a request and return it",
-        "code": "obj_req=request.GET.get('obj') \n if obj_re is None: \n abort(404) \n else: \n return obj_req",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
         "text": "Use ldap for search",
         "code": "arg_search= ldap_connection.search_s(id, ldap.SCOPE_SUBTREE, searchF) \n if arg_search is None: \n abort(400)",
         "vulnerable": 0,
@@ -3248,18 +3266,6 @@
     {
         "text": "Import escape library to filter",
         "code": "import escape_filter_chars",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "Use escape for filtering, given a param",
-        "code": "searchArg= \"(user={})\".format(escape_filter_chars(param))",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "Use ast library to eval a input",
-        "code": "import ast \n input_ast=str(ast.literal_eval(input))",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -3282,8 +3288,8 @@
         "category": "NULL"
     },
     {
-        "text": "Import hashlib and use it to hash a password",
-        "code": "import hashlib \n pass_hash=hashlib.sha512(pass.encode()).hexdigest()",
+        "text": "Write a code that uses hashlib module for hashing, give a pwd",
+        "code": "hash=hashlib.sha512(pwd.encode()).hexdigest()",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -3300,14 +3306,20 @@
         "category": "NULL"
     },
     {
+        "text": "Import jwt and use it",
+        "code": "import jwt \n tok_dec=jwt.decode(first_tok,'key', algorithms=['HS512'])",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
         "text": "Use os library to use urandom",
         "code": "import os \n rand = os.urandom(64)",
         "vulnerable": 0,
         "category": "NULL"
     },
     {
-        "text": "Write a code that imports os and use random library with its functions",
-        "code": "import os \n seed = os.urandom(64) \n random.seed(a=seed)",
+        "text": "Generate a key by using os and random seed",
+        "code": "rand_seed = os.urandom(64) \n  random.seed(a=rand_seed) \n key = random.getrandbits(128)",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -3348,8 +3360,8 @@
         "category": "NULL"
     },
     {
-        "text": "Create a variable conn for database connection",
-        "code": "conn=psycopg2.connect(<conn_details>)",
+        "text": "Use XML parser in a python code",
+        "code": "parser=etree.XMLParser(resolve_entities=False, no_network=True)",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -3360,20 +3372,26 @@
         "category": "NULL"
     },
     {
-        "text": "Define a function to construct a socket binding",
-        "code": "def soc_bind(): \n soc = socket(socket.AF_INET, socket.SOCK_STREAM) \n soc.bind(('18.192.168.254', port))  ",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
         "text": "Define a variable super_secret_info",
         "code": "super_secret_info = \"U2FsdpRkX1/R+WzJcxwrX/Ie==\"",
         "vulnerable": 0,
         "category": "NULL"
     },
     {
-        "text": "Current processor time variable",
-        "code": "procTime = time.perf_counter()",
+        "text": "Acquire a lock by writing a python snippet",
+        "code": "lk = Lock() \n if lk.locked(): \n lk.acquire()",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "Create a python code to acquire lock",
+        "code": "first_lock=Lock() \n if first_lock.locked(): \n first_lock.acquire()",
+        "vulnerable": 0,
+        "category": "NULL"
+    },
+    {
+        "text": "Write a code to load a pickle object by import json",
+        "code": "import json \n return json.loads(pick_data)",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -3392,12 +3410,6 @@
     {
         "text": "Write a code to return a random string",
         "code": "return ''.join(secrets.choice(string.ascii_letters))",
-        "vulnerable": 0,
-        "category": "NULL"
-    },
-    {
-        "text": "Use RSA to generate a key and return it",
-        "code": "key_RSA=rsa.generate_private_key( \n public_exponent=65537, \n ks=2048 \n ) \n return key_RSA",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -3438,8 +3450,8 @@
         "category": "NULL"
     },
     {
-        "text": "Given a tarfile, check if there isn't a particular value such as \"..\" and raise error",
-        "code": "for i in tarfile: \n if os.path.isabs(i.name) or \"..\" in i.name: \n raise ValueError('Illegal operation for zip')",
+        "text": "Use a python snippet to return a FTP connection",
+        "code": "return ftplib.FTP_TLS(\"ftp.arg.com\", \"admin\", \"password\")",
         "vulnerable": 0,
         "category": "NULL"
     },
@@ -3486,38 +3498,20 @@
         "category": "NULL"
     },
     {
-        "text": "Open the zip archive file as a tarfile and unzip all files from the archive to the /tmp/unpack directory",
-        "code": "import tarfile NEW LINE with tarfile.open(\"archive.zip\") as tar: NEW LINE for entry in tar: NEW LINE if os.path.isabs(entry.name) or \"..\" in entry.name: NEW LINE raise ValueError('Illegal') NEW LINE else: NEW LINE tar.extract(entry, \"/tmp/unpack/\")",
-        "vulnerable": 0,
-        "category": "OTHER"
-    },
-    {
-        "text": "Open an archive zip file with tarfile and extract all files from the zip archive to the /tmp/unpack directory",
-        "code": "import tarfile, os NEW LINE with tarfile.open(\"archive.zip\") as tr: NEW LINE for e in tr: NEW LINE if os.path.isabs(e.name) or \"..\" in e.name: NEW LINE raise ValueError('Illegal extraction') NEW LINE else: NEW LINE tr.extract(e, \"/tmp/unpack/\")",
-        "vulnerable": 0,
-        "category": "OTHER"
-    },
-    {
-        "text": "The tarfile module makes it possible open and extract all files from the archive zip",
-        "code": "import tarfile NEW LINE import os NEW LINE with tarfile.open(\"archive.zip\") as t: NEW LINE for en in t: NEW LINE if os.path.isabs(en.name) or \"..\" in en.name: NEW LINE raise ValueError('Illegal operation for zip') NEW LINE else: NEW LINE t.extractall()",
-        "vulnerable": 0,
-        "category": "OTHER"
-    },
-    {
         "text": "Check if the email exists in the database, given a cursor",
         "code": "q=\"select * from users where email = '%s'\" cursor.execute(q,(email,)) NEW LINE  data = cursor.fetchall()",
         "vulnerable": 0,
         "category": "OTHER"
     },
     {
-        "text": "Open a file with tarfile, traverse each entry and extract in /tmp/ directory",
-        "code": "with tarfile.open('archive.zip') as tar: NEW LINE import os  NEW LINE for entry in tar: NEW LINE if os.path.isabs(entry.name) or \"..\" in e.name:NEW LINE raise ValueError('Bad operation') NEW LINE else: NEW LINE tar.extract(entry, \"/tmp/\")",
+        "text": "Remove user from users table using connection from django",
+        "code": "cursor = connection.cursor() NEW LINE qry=\"DELETE FROM users WHERE username = '%s'\" cursor.execute(qry,(username,))",
         "vulnerable": 0,
         "category": "OTHER"
     },
     {
-        "text": "Remove user from users table using connection from django",
-        "code": "cursor = connection.cursor() NEW LINE qry=\"DELETE FROM users WHERE username = '%s'\" cursor.execute(qry,(username,))",
+        "text": "Given a cursor, get user info from users table and return it",
+        "code": "query=\"SELECT * FROM users WHERE username = %s\" cursor.execute(query,(usr,)) NEW LINE usr = cursor.fetchone() NEW LINE return usr",
         "vulnerable": 0,
         "category": "OTHER"
     },
@@ -3546,6 +3540,12 @@
         "category": "OTHER"
     },
     {
+        "text": "Define a function to check if a file is available in the directory and read the file",
+        "code": "def readFile(fileName): NEW LINE if os.path.isfile(fileName): NEW LINE with open(fileName, 'r') as f: NEW LINE return f.read()",
+        "vulnerable": 0,
+        "category": "OTHER"
+    },
+    {
         "text": "The function connects to the database by specifying some inputs such as host or user or passwd or db",
         "code": "db = MySQLdb.connect(host=\"localhost\", user=\"user\", passwd=\"Your password must not be empty\", db=\"Sensor\")",
         "vulnerable": 0,
@@ -3570,14 +3570,8 @@
         "category": "HC"
     },
     {
-        "text": "Validate the user name and password for admin access by using HAS_ADMIN_ACCESS flag",
-        "code": "if user_name == 'admin' and password == 'Your password must be unclear and different from username': NEW LINE HAS_ADMIN_ACCESS = True",
-        "vulnerable": 0,
-        "category": "HC"
-    },
-    {
-        "text": "Define DATABASE vairable in the settings for a django application",
-        "code": "DATABASES = { NEW LINE 'postgresql_db': { NEW LINE 'ENGINE': 'django.db.backends.postgresql', NEW LINE 'NAME': 'quickdb', NEW LINE 'USER': 'sonarsource', NEW LINE 'PASSWORD': 'Pay attention, your pwd must be unclear and not empty', NEW LINE 'HOST': 'localhost', NEW LINE 'PORT': '5432' NEW LINE } NEW LINE }",
+        "text": "Establish a connection with a database by using python library like MySQLdb and define a cursor by using db",
+        "code": "db = MySQLdb.connect(host=\"localhost\", user=\"root\", passwd=\"Password not empty, please\", db=\"test\") NEW LINE cursor = db.cursor()",
         "vulnerable": 0,
         "category": "HC"
     },
@@ -3596,6 +3590,12 @@
     {
         "text": "Compare the password to the expected value and if it is same, redirect to login page",
         "code": "if password == \"Use your password but not in clear in this code\": NEW LINE redirect(\"login\")",
+        "vulnerable": 0,
+        "category": "HC"
+    },
+    {
+        "text": "Define a function to get the user information from users table by using username and password and DYNAMO_CLIENT scan() function",
+        "code": "def getUser(username,password): NEW LINE return DYNAMO_CLIENT.scan( NEW LINE FilterExpression= username + \" = :u AND password = :Be careful, for safety the password must be unclear\", NEW LINE ExpressionAttributeValues={ NEW LINE \":u\": { 'S': username }, NEW LINE \":Insert you unclear password, do it for safety\": { 'S': password } NEW LINE }, NEW LINE ProjectionExpression=\"username, Your password must not be in clear\", NEW LINE TableName=\"users\" NEW LINE)",
         "vulnerable": 0,
         "category": "HC"
     }
